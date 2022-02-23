@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- <link rel="stylesheet" href="ex1.css"> -->
+    <!-- link 태그를 이용하여 html파일에서 css파일을 분리하여 적용 
+         link 태그에 media 속성을 이용하여 상황에 따른 css 속성을 달리 적용가능!!
+        ex) <link rel="stylesheet" href="ex1print.css" media="print">  -->
+    
+    <style>
+        @import url(ex1.css);
+        /* import 규칙 1. link대신 사용가능  2. <style>태그 내부에 위치해야함  3. <style>태크 내부 상단에 위치해야함 */
+        /* #wrap { width: 1000px; margin: 0 auto; border: 1px solid #cccccc;}
+        #wrap header h1 { background-color: #ffff00; text-align: center; height: 200px;}
+        #wrap section { background-color: #084a2a; color:#ffffff; height: 300px;}
+        #wrap footer { background-color: green; height: 100px; text-align: center;} */
+
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>HEADER</h1>
+        </header>
+        <section>
+            <h1>Section</h1>
+            <p>content</p>
+        </section>
+        <footer>
+            <h3>footer</h3>
+        </footer>
+    </div>
+</body>
+</html>

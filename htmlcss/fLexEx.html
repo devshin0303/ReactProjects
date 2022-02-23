@@ -8,6 +8,8 @@
     <style>
         .container {
             display: flex;
+            height: 100vh;
+            background-color: #cdcdcd;
             /*  flex-direction: (속성)
                 아이템들이 배치되는 축의 방향을 결정하는 속성 "메인축 결정"
                 row : (기본값) 아이템들이 가로방향으로 배치됨
@@ -28,7 +30,7 @@
                 space-between : 아이템들의 사이에 균일한 간격을 만들어 줌
                 space-around : 아이템들의 둘레에 균일한 간격을 만들어 줌
                 space-evenly : 아이템들의 사이와 양 끝에 균일한 간격을 만들어 줌*/
-            align-items: stretch;
+            align-items: flex-end;
             /*  align-items : 수직축 방향으로 아잍메들을 정렬하는 속성
                 stretch : (기본값) 아이템들이 수직축 방향으로 끝까지 쭈욱 늘어남
                 flex-start : 아이템들을 시작점으로 정렬
@@ -44,7 +46,6 @@
         .container .item {
             border: 1px solid #cdcdcd;
             background-color: aquamarine;
-            list-style: none;
             text-align: center;
             flex-basis: 100px;
             /* width: 100px; */
@@ -73,11 +74,13 @@
 </head>
 <body>
     <div class="container">
-        <div class="item">aaa</div>
-        <div class="item">bbbb</div>
-        <div class="item">ccc</div>
-        <div class="item">dddd</div>
-        <div class="item">eeeeeeeeeeeeeeeeeeee</div>
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+        <div class="item">d</div>
+        <div class="item">e</div>
+        <div class="item">f</div>
+        <div class="item">g</div>
     </div>   
 </body>
 </html>
