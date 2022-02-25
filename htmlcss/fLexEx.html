@@ -21,7 +21,7 @@
                 no-wrap : (기본값) 줄바꿈을 하지 않고 빠져나감
                 wrqp : 줄바꿈을 함. float이나 inline-block으로 배치한 요소들과 비슷하게 동작
                 wrqp-reverse : 줄바꿈을 하는데, 아이템을 역순으로 배치함*/
-            flex-flow: row wrap; /* flex-direction 과 flex-wrqp 을 동시에 지정할 수 있음 */
+            flex-flow: nowrap; /* flex-direction 과 flex-wrqp 을 동시에 지정할 수 있음 */
             justify-content: flex-start;
             /*  justify-content : 메인축 방향 설정
                 flex-start : (기본값) 아이템을 시작점으로 정렬
@@ -30,7 +30,7 @@
                 space-between : 아이템들의 사이에 균일한 간격을 만들어 줌
                 space-around : 아이템들의 둘레에 균일한 간격을 만들어 줌
                 space-evenly : 아이템들의 사이와 양 끝에 균일한 간격을 만들어 줌*/
-            align-items: flex-end;
+            align-items: flex-start;
             /*  align-items : 수직축 방향으로 아잍메들을 정렬하는 속성
                 stretch : (기본값) 아이템들이 수직축 방향으로 끝까지 쭈욱 늘어남
                 flex-start : 아이템들을 시작점으로 정렬
@@ -65,7 +65,7 @@
                align-self는 align-items 보다 우선권이 있고, aling-items를 상속 받는다. 속성값은 align-items와 동일!!*/
                order: 1;
                /* 각 아이템들의 시각적 순서를 나열하며, order에 적용된 값이 작은 순서대로 출력하고, order 가 있는 items와 없는 items가 있을 시 없는 items가 먼저 출력된다. */
-               z-index: 1;
+               
                transform: scale(2);
         }
 
