@@ -1,0 +1,108 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+}
+
+body {
+  padding-top: 64px;
+  margin: 0;
+  line-height: inherit;
+  display: block;
+}
+body,
+html {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+*,
+::after,
+::before {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246/0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+}
+.mainBannerBox {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  padding: 5rem 2rem 0 2rem;
+  background: linear-gradient(to right, rgb(254, 202, 87), rgb(255, 159, 67));
+}
+.mainBannerFlexBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 1.25rem;
+}
+
+.mainBannerFlexBox h1 {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+}
+.mainBannerFlexBox h2 {
+  margin-bottom: 1rem;
+  margin: 0;
+}
+.mainBannerBox::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to right, rgb(254, 202, 87), rgb(255, 159, 67));
+  z-index: -1;
+  top: 0px;
+  transform-origin: center top;
+}
+
+.mainBannerBox::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to right, rgb(254, 202, 87), rgb(255, 159, 67));
+  z-index: -1;
+  bottom: 0px;
+  transform-origin: right bottom;
+  transform: skewY(-5deg);
+}

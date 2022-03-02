@@ -1,0 +1,145 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+}
+
+body {
+  padding-top: 64px;
+  margin: 0;
+  line-height: inherit;
+  display: block;
+}
+body,
+html {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+*,
+::after,
+::before {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246/0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+}
+
+.shawdow {
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0/0.1), 0 1px 2px -1px rgb(0 0 0/0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
+    0 1px 2px -1px var(--tw-shadow-color);
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.w-full {
+  width: 100%;
+}
+.z-50 {
+  z-index: 50;
+}
+.top-0 {
+  top: 0;
+}
+.fixed {
+  position: fixed;
+}
+.main_navbox {
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  position: relative;
+}
+
+.main_navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  position: relative;
+}
+
+.main_img_menubar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex: 1 1 0%;
+}
+
+.main_img {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.main_menubar {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+  justify-content: end;
+}
+
+.main_menubar > a {
+  margin-left: 2rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.signin_loginbar {
+  display: flex;
+  margin-left: 1.5rem;
+  position: relative;
+  padding-right: 0.5rem;
+  align-items: center;
+}
+
+.signin_loginbarbox {
+  display: flex;
+  align-items: center;
+  margin-left: 0.75rem;
+  position: relative;
+}
+.signin_loginbarbox > a:nth-child(1) {
+  margin-right: 2rem;
+}
