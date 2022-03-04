@@ -1,0 +1,215 @@
+.shadow {
+  box-shadow: 0px 2px 2px#999;
+}
+.container {
+  background-color: rgb(249 250 251);
+  opacity: 1;
+}
+.mainBannerBox {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  min-height: 200px;
+  background: linear-gradient(to right, rgb(254, 202, 87), rgb(255, 159, 67));
+}
+.mainBannerInnerBox {
+  max-width: 1280px;
+  padding: 5rem 2rem 2rem 0;
+  margin: 0 auto;
+}
+.BannerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 0 1.25rem 0;
+  opacity: 1;
+  color: rgb(31 41 55);
+  width: 100%;
+}
+.BigBanner {
+  font-size: 3rem;
+  line-height: 1;
+  text-align: center;
+  width: 100%;
+  margin: 0 0 0.75rem 0;
+  font-weight: inherit;
+}
+.smallBanner {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  margin: 0 0 1rem;
+  font-weight: inherit;
+}
+.mainBannerBox::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  bottom: 0px;
+  transform-origin: right bottom;
+  transform: skewy(-5deg);
+}
+.stepBox {
+  display: flex;
+  z-index: 10;
+  position: relative;
+  justify-content: center;
+  margin: 4rem 0 5rem 0;
+  font-size: 00.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.lowlevel {
+  color: rgb(161 98 7);
+  padding: 0.25rem 1.25rem;
+  background-color: rgb(254 249 195);
+  border-radius: 9999px;
+  margin-right: 0.25rem;
+  opacity: 1;
+  
+}
+.free {
+  color: rgb(59 130 246);
+  opacity: 1;
+  padding: 0.25rem 1.25rem;
+  border-radius: 9999px;
+  margin-left: 0.25rem;
+  background-color: rgb(255 255 255);
+}
+.contentBox {
+  padding: 0 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.contentInnerBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 100vh;
+  height: 100%;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 6rem;
+}
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  z-index: 10;
+  top: 5rem;
+  background-color: rgb(255 255 255);
+  opacity: 1;
+  margin-top: -226px;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  position: sticky;
+}
+.firstBox {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.lowlevel2 {
+  color: rgb(161 98 7);
+  padding: 0.125rem 0.75rem;
+  background-color: rgb(254 249 195);
+  border-radius: 9999px;
+  margin-right: 0.25rem;
+  opacity: 1;
+  font-size: 00.875rem;
+  line-height: 1.25rem;
+
+}
+.freeLecture {
+  margin-left: 0.5rem;
+  border-radius: 00.25rem;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  opacity: 1;
+  color: rgb(255 255 255);
+  background-color: rgb(107 114 128);
+}
+.secondBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 1.25rem;
+}
+.naming {
+  color: rgb(107 114 128);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.naming2 {
+  color: rgb(107 114 128);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.naming1content {
+  font-size: 00.875rem;
+  line-height: 1.25rem;
+}
+.thirdBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 1.25rem;
+}
+.sideBar a {
+  color: rgb(255 255 255);
+  background-color: rgb(59 130 246);
+  text-align: center;
+  padding: 0.5rem 0;
+  opacity: 1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.25rem;
+  text-decoration: inherit;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+.firstFlexBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+p {
+  text-align: left;
+  line-height: 2rem;
+  font-size: 1.125rem;
+  margin: 0 0 2.5rem 0;
+}
+.thirdFlexBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.thirdFlexBox :nth-child(n+2) {
+  margin-left: 0.75rem;
+}
+.hashtag {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: rgb(55 65 81);
+  padding: 0.25rem 0.5rem;
+  background-color: rgb(255 255 255);
+  border-radius: 00.375rem;
+  white-space: nowrap;
+}
