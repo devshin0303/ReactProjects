@@ -20,6 +20,9 @@
       line-height: inherit;
       display: block;
     }
+    h1,h2,h3,h4,h5,h6 {
+      margin: 0;
+    }
     body,
     html {
       font-family: "Spoqa Han Sans Neo", "sans-serif";
@@ -34,20 +37,20 @@
           <div class="headerLeftMenu">
             <div class="logoBox">
               <a href="">
-                <img src="iamge/m.svg" alt="">
+                <img src="image/m.svg" alt="">
               </a>
             </div>
             <div class="mainMenu">
-              <a href="">Courses</a>
-              <a href="">Challenges</a>
-              <a href="">Community</a>
-              <a href="">FAQ</a>
-              <a href="">Roadmap</a>
+              <a  class="menuHover" href="#">Courses</a>
+              <a class="menuHover" href="#">Challenges</a>
+              <a class="menuHover" href="#">Community</a>
+              <a class="menuHover" href="#">FAQ</a>
+              <a class="menuHover" href="#">Roadmap</a>
             </div>
           </div>
           <div class="headerRightMenu">
             <div class="headerRightMenuBox">
-              <a class="login" href="">Login</a>
+              <a class="login menuHover" href="">Login</a>
               <div class="joinBox">
               <a href="">Join</a>
               </div>
@@ -82,19 +85,320 @@
     <div class="contentBox">
       <div class="contentInnerBox">
         <div class="section">
-          <div class="firstFlexBox">
-             
+          <div class="firstAreaBox">
+             <div class="whiteBox shadow">
+              <div class="whiteBoxPadding">
+                <div class="whiteBoxContent">
+                  <div class="leftBox shadow">
+                    <img src="image/circle-play-solid.svg" class="w-100">
+                  </div>
+                  <div class="rightBox">
+                    <div class="firstText">동영상</div>
+                    <div class="secondText">60개</div>
+                  </div>
+                </div>
+              </div>
+             </div>
+             <div class="whiteBox shadow">
+              <div class="whiteBoxPadding">
+                <div class="whiteBoxContent">
+                  <div class="leftBox shadow">
+                    <img src="image/clock-solid.svg" class="w-100">
+                  </div>
+                  <div class="rightBox">
+                    <div class="firstText">강의분량</div>
+                    <div class="secondText">8시간</div>
+                  </div>
+                </div>
+              </div>
+             </div>
+             <div class="whiteBox shadow">
+              <div class="whiteBoxPadding">
+                <div class="whiteBoxContent">
+                  <div class="leftBox shadow">
+                    <img src="image/slider.png" class="w-100">
+                  </div>
+                  <div class="rightBox">
+                    <div class="firstText">레벨</div>
+                    <div class="secondText">초급</div>
+                  </div>
+                </div>
+              </div>
+             </div>
           </div>
-          <p>
-            직접 한땀 한땀 코딩하며 성장할 수 있는,<br>
-            실전형 코딩으로 빠르게 시작하세요!
-          </p>
-          <div class="thirdFlexBox">
-            <span class="shadow hashtag">#클론코딩</span>
-            <span class="shadow hashtag">#현업중심</span>
-            <span class="shadow hashtag">#자기주도학습</span>
+          <div class="secondAreaBox">
+            <span class="bluecircle">학습 효과</span>
+            <h3 class="fontBlackLarge">실전형 코딩을 시작하세요</h3>
+            <h5 class="fontBlackMedium">왜 직접 만들면서 배워야.<span class="textBlue">진짜 지식이 될까요?</span></h5>
+            <div class="imageBox">
+              <div class="imageBoxGrid">
+                <div class="imageBox1 shadow">
+                  <img src="image/freeCourse01.svg" class="freeCourse">
+                  <p class="imageDescription">
+                    우리는 그동안
+                    <br>
+                    딱딱한 이론과 문법 중심의
+                    <br>
+                    한국식 코딩을 배워왔어요.
+                    <br>
+                  </p>
+                </div>
+                <div class="imageBox1 shadow">
+                  <img src="image/freeCourse02.svg" class="freeCourse">
+                  <p class="imageDescription">
+                    이렇게 배운 지식은
+                    현업에서 바로 활용하기 어려워요.
+                  </p>
+                </div>
+                <div class="imageBox1 shadow">
+                  <img src="image/freeCourse03.svg" class="freeCourse">
+                  <p class="imageDescription">
+                    하지만 존재하는 서비스와 기능을
+                    따라 만들면서 배우면,
+                    온전히 나의 기술로 습득할 수 있어요.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p class="ptag">
+              직접 한땀 한땀 코딩하며 성장할 수 있는,<br>
+              실전형 코딩으로 빠르게 시작하세요!
+            </p>
+            <div class="hashtagBox">
+              <span class="shadow hashtag">#클론코딩</span>
+              <span class="shadow hashtag">#현업중심</span>
+              <span class="shadow hashtag">#자기주도학습</span>
+            </div>
           </div>
-        </div>
+          <div class="thirdAreaBox">
+            <span class="bluecircle">강의 내용</span>
+            <h3 class="fontBlackLarge">배우고, 직접 구현합니다.</h3>
+            <div class="contentGridBox">
+              <div class="firstContentGridBox">
+                <div class="whiteBox2 shadow">
+                  <div class="h4Box shadow">
+                    <h4>배우는 이론</h4>
+                  </div>
+                  <div class="checkListFlexBox">
+                    <span class="checkList"><img class="checkImg" src="image/check.png">Variables</span>
+                    <span class="checkList"><img class="checkImg" src="image/check.png">Functions</span>
+                    <span class="checkList"><img class="checkImg" src="image/check.png">Data Type</span>
+                    <span class="checkList"><img class="checkImg" src="image/check.png">Arrays, Objects</span>
+                    <span class="checkList"><img class="checkImg" src="image/check.png">Dom Functions</span>
+                    <span class="checkList"><img class="checkImg" src="image/check.png">Events</span>
+                    <span class="checkList"><img class="checkImg" src="image/check.png">if /else /for</span>
+                  </div>
+                </div> <!--whiteBox2-->
+                <div class="whiteBox2 shadow">
+                  <div class="h4Box shadow">
+                    <h4>구현하는 기능</h4>
+                  </div>
+                  <div class="checkListFlexBox">
+                    <span class="checkList"><img class="checkImg" src="image/check.png">JS Clock</span>
+                    <span class="checkList"><img class="checkImg" src="image/check.png">JS ToDo List</span>
+                    <span class="checkList"><img class="checkImg" src="image/check.png">Get Geolocation</span>
+                    <span class="checkList"><img class="checkImg" src="image/check.png">Get Weather</span>
+                    <span class="checkList"><img class="checkImg" src="image/check.png">Deploy to GitHub Page</span>
+                  </div>
+                </div> <!--whiteBox2-->
+              </div> <!--firstContentGridBox-->
+              <div class="macBox shadow">
+                <div class="topBox">
+                  <div class="colorCircleBox">
+                    <div class="redCircle"></div>
+                    <div class="yellowCircle"></div>
+                    <div class="greenCircle"></div>
+                  </div>
+                  <span class="w-span">다음과 같은 패키지를 사용합니다.</span>
+                </div> <!--topBox-->
+                <div class="bottomBox">
+                  {
+                    <div class="bottomInnerBox">
+                      <div>
+                        "<span class="t-pink">이름</span>":"<span class="t-sky">바닐라 JS로 크롬 앱 만들기</span>",
+                      </div>
+                      <div>
+                        "<span class="t-pink">섹션</span>":"<span class="t-sky">무엇을 사용하나요??</span>",
+                      </div>
+                      <div>
+                        "<span class="t-pink">패키지</span>": [
+                        <div class="ml-10">
+                          "<span class="t-sky">Javascript</span>"
+                        </div>
+                        <div class="ml-10">
+                          "<span class="t-sky">LocalStorage</span>"
+                        </div>
+                        <div class="ml-10">
+                          "<span class="t-sky">AJAX</span>"
+                        </div>
+                        <div class="ml-10">
+                          "<span class="t-sky">JSON</span>"
+                        </div>
+                        <div class="ml-10">
+                          "<span class="t-sky">DOM</span>"
+                        </div>
+                        <div class="ml-10">
+                          "<span class="t-sky">fetch</span>"
+                        </div>
+                        <div class="ml-10">
+                          "<span class="t-sky">OpenWeather API</span>"
+                        </div>
+                      </div>
+                      <div>]</div>
+                    </div> <!--bottomInnerBox-->
+                  }
+                </div> <!--bottomBox-->
+              </div> <!--MacBox-->
+              <div class="lastWhiteBox shadow">
+                <div class="flexItemBox">
+                  <span class="mr-5"><img src="image/java-script.png " class="wh" alt=""></span>
+                  <span class="text-lg">Javascript</span>
+                </div>
+                <div class="flexItemBox">
+                  <span class="mr-5"><img src="image/html-5.png" class="wh" alt=""></span>
+                  <span class="text-lg">Html5</span>
+                </div>
+                <div class="flexItemBox">
+                  <span class="mr-5"><img src="image/api.png" class="wh" alt=""></span>
+                  <span class="text-lg">OpenWeather API</span>
+                </div>
+              </div>
+            </div>
+          </div> <!--thirdAreaBox-->
+          <div class="forthAreaBox">
+            <div class="mb-12">
+            <span class="bluecircle">로드맵</span>
+            <h3 class="fontBlackLarge">이 정도 수준인 분들 드루와요</h3>
+            <h5 class="fontBlackMedium">기본적인 HTML, CSS, JS에 대한 이해도가 있는 분들이 수강하실 수 있습니다.</h5>
+            </div>
+            <div class="bg-grid">
+              <div class="bg-flexbox shadow">
+                <div class="lbox">
+                  <img src="image/html-5 (1).png" class="img-ib">
+                  <img src="image/css-3.png" class="img-ib-r">
+                </div>
+                <div class="rbox">
+                  <p>
+                    초급 이상의 <strong>HTML. CSS</strong> 이해도가 필요합니다.<br>
+                    왕초보 분들은 <strong>선수강의</strong>로 시작하세요.
+                  </p>
+                  <a class="textBlue tx-ul ft-w" href="">HTML CSS 강의 보러가기→</a>
+                </div>
+              </div>
+            </div>
+          </div> <!--forthhAreaBox-->
+          <div class="fifthAreaBox">
+
+          </div>
+          <div class="sixthAreaBox">
+            <div class="mb-12">
+              <h3 class="fontBlackLarge">결과적으로 이 수업 이후 ...</h3>
+              <div class="mt-1rem">
+                <span class="checkList"><img class="checkImg" src="image/check.png">기초적인 수준이지만 자바스크립트 기본기에 대하여 이해하게 된다.</span>
+                <span class="checkList"><img class="checkImg" src="image/check.png">자바스크립트로 시계, 할일목록, 날씨 등 기본기능을 구현할 수 있게된다.</span>
+                <span class="checkList"><img class="checkImg" src="image/check.png">바닐라 자바스크립트를 활용해서 간단한 웹 서비스를 만들 수 있다.</span>
+              </div>
+            </div>
+            <div class="screenBox shadow">
+              <div class="screenwh">
+                <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="100%" height="100%" src="https://www.youtube.com/embed/yLNuqWCUA8A?autoplay=0&amp;mute=0&amp;controls=1&amp;origin=https%3A%2F%2Fnomadcoders.co&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;cc_lang_pref=ko&amp;cc_load_policy=1&amp;enablejsapi=1&amp;widgetid=3" id="widget4"></iframe>
+              </div>
+            </div>
+          </div> <!-- sixthAreaBox-->
+          <div class="sevthAreaBox">
+            <div class="h2Box">
+              <h2>2021 UPDATED SUMMARY</h2>
+            </div>
+            <ul>
+              <li>총 강의수: 60개 (8시간)</li>
+              <li>JS를 활용한 기초적인 프론트엔드 빌드 배우고 + 결과물까지!</li>
+              <li>더 친절하고, 더 자세한 설명으로 2021년 업데이트 되었어요.</li>
+              <li>무료 강의도 업데이트 해주는 것은 무엇? #노마진코더</li>
+              <li>네 맞아요! 게다가 무료입니다.</li>
+              <li>완료된 결과물 ⭐️ <a class="textBlue" target="_blank" href="https://serranoarevalo.github.io/momonton/">최종 데모</a> ⭐️ 를 살펴보세요.</li>
+              <li><a class="textBlue" target="_blank" href="https://nomadcoders.co/javascript-for-beginners/lectures/2866">지금 맛보기 시작하기!</a></li>
+            </ul>
+            <hr>
+            <div class="h2Box">
+              <h2>자바스크립트 2주 완성반</h2>
+            </div>
+            <ul>
+              <li>강의도 100% 완료하고, 10% 할인쿠폰도 받을 수 있는 기회!</li>
+              <li>2주 안에 JS를 뿌셔버릴 수 있는 학습 스케쥴표 제공!</li>
+              <li>니꼬샘이 직접 제작한 퀴즈, 코딩 과제를 하면서 진짜 내 지식으로 만드세요.</li>
+              <li>모르는 내용은 개발자 수만명이 모인 노마드 커뮤니티에서 실시간으로 물어보면서 해결할 수 있어요.</li>
+              <li><a class="textBlue" target="_blank" href="https://nomadcoders.co/javascript-for-beginners/lectures/2866">2주 바닐라 JS완성반 알아보기</a></li>
+            </ul>
+          </div> <!-- sevthAreaBox-->
+          <div class="eigthAreaBox">
+            <div class="ccBox">
+              <div class="flex-row">
+                <h3>상세 커리큘럼</h3>
+                <div class="flex-mt-0">
+                  <div class="flex-align-c">
+                    <img src="image/circle-play-solid.svg" alt="">
+                    <span>동영상 60개</span>
+                  </div>
+                  <div class="flex-align-c ml-5">
+                    <img src="image/clock-solid.svg" alt="">
+                    <span>총 8시간</span>
+                  </div>
+                </div>
+              </div>
+              <span class="allOpenButton">전체 열기</span>
+            </div>
+            <div class="flex-column">
+              <div class="selectBox-whiteBox shadow">
+                <div class="selectBox">
+                  <span># [2021 UPDATE] INTRODUCTION</span>
+                  <span><img src="image/check.png" alt=""></span>
+                </div>
+              </div>
+              <div class="selectBox-whiteBox shadow">
+                <div class="selectBox">
+                  <span># [2021 UPDATE]   welcom to javascript</span>
+                  <span><img src="image/check.png" alt=""></span>
+                </div>
+              </div>
+              <div class="selectBox-whiteBox shadow">
+                <div class="selectBox">
+                  <span># [2021 UPDATE] javascript on the browser</span>
+                  <span><img src="image/check.png" alt=""></span>
+                </div>
+              </div>
+              <div class="selectBox-whiteBox shadow">
+                <div class="selectBox">
+                  <span># [2021 UPDATE] login</span>
+                  <span><img src="image/check.png" alt=""></span>
+                </div>
+              </div>
+              <div class="selectBox-whiteBox shadow">
+                <div class="selectBox">
+                  <span># [2021 UPDATE] clock</span>
+                  <span><img src="image/check.png" alt=""></span>
+                </div>
+              </div>
+              <div class="selectBox-whiteBox shadow">
+                <div class="selectBox">
+                  <span># [2021 UPDATE] quotes and background</span>
+                  <span><img src="image/check.png" alt=""></span>
+                </div>
+              </div>
+              <div class="selectBox-whiteBox shadow">
+                <div class="selectBox">
+                  <span># [2021 UPDATE] to do list</span>
+                  <span><img src="image/check.png" alt=""></span>
+                </div>
+              </div>
+              <div class="selectBox-whiteBox shadow">
+                <div class="selectBox">
+                  <span># [2021 UPDATE] Weather</span>
+                  <span><img src="image/check.png" alt=""></span>
+                </div>
+              </div>
+            </div>
+          </div> <!--eigthAreaBox-->
+        </div>  <!-- section-->
         <div class="sideBar shadow">
           <div class="firstBox">
             <span class="lowlevel2">초급</span>
@@ -113,9 +417,27 @@
             <span class="naming1content">Deploy to GitHub Pages</span>
             <span class="naming2">그 외 다수...</span>
           </div>
-          <a class="forthBox" href="">무료 수강하기</a>
+          <a href="">무료 수강하기</a>
+        </div> <!-- sidebar-->
+      </div> <!--contentInnerBox-->
+    </div> <!--contentBox-->
+    <div class="banner-middle">
+      <div>
+        <div class="banner-contentBox">
+          <div class="lft-content">
+            해당 강의는 <span class="textBlue">무료</span> 입니다.<br>
+            지금 바로 시작해보세요!
+          </div>
+          <a class="bannerA" href="#">무료 수강하기</a>
         </div>
-        </div>
+      </div>
+    </div> <!--banner-middle-->
+    <div class="bottom-banner shadow">
+      <span>무료 수강하기</span>
+    </div>
+    <div class="contentBox2">
+      <div class="contentInnerBox2">
+        
       </div>
     </div>
   </div>

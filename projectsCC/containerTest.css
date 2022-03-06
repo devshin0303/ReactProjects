@@ -104,6 +104,7 @@
   background-color: rgb(255 255 255);
   opacity: 1;
   margin-top: -226px;
+  margin-left: 3rem;
   padding: 1.25rem;
   border-radius: 0.5rem;
   position: sticky;
@@ -178,6 +179,9 @@
   margin-top: 1.25rem;
   text-decoration: inherit;
 }
+.sideBar a:hover {
+  background-color: aqua;
+}
 .section {
   display: flex;
   flex-direction: column;
@@ -189,18 +193,18 @@
   justify-content: space-between;
   width: 100%;
 }
-p {
+.ptag {
   text-align: left;
   line-height: 2rem;
   font-size: 1.125rem;
   margin: 0 0 2.5rem 0;
 }
-.thirdFlexBox {
+.hashtagBox {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
-.thirdFlexBox :nth-child(n+2) {
+.hashtagBox :nth-child(n+2) {
   margin-left: 0.75rem;
 }
 .hashtag {
@@ -212,4 +216,534 @@ p {
   background-color: rgb(255 255 255);
   border-radius: 00.375rem;
   white-space: nowrap;
+}
+.firstAreaBox {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+}
+.whiteBox {
+  background-color: rgb(255 255 255);
+  opacity: 1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.whiteBoxPadding {
+  padding: 1.25rem 1rem;
+}
+.whiteBoxContent {
+  display: flex;
+  align-items: center;
+}
+.leftBox {
+  padding: 0.75rem;
+  background-color: rgb(59 130 246);
+  flex-shrink: 0;
+  border-radius: 0.375rem;
+}
+.rightBox {
+  flex: 1 1 0%;
+  width: 0%;
+  margin-left: 1.25rem;
+}
+.firstText {
+  color:rgb(107 114 128);
+  line-height: 1.25rem;
+  font-weight: 500;
+  font-size: 00.875rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.secondText {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color:rgb(17 24 39);
+}
+.secondAreaBox {
+  margin-top: 5rem;
+}
+
+.bluecircle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375rem 0.75rem;
+  line-height: 1;
+  font-size: 0.75rem;
+  color: rgb(255 255 255);
+  opacity: 1;
+  background-color:rgb(59 130 246);
+  border-radius: 1rem;
+  margin: 0 0 0.5rem 0;
+}
+.fontBlackLarge {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  margin: 0 0 0.75rem 0;
+}
+.fontBlackMedium {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+  margin: 0;
+}
+.textBlue {
+  color: rgb(59 130 246);
+  opacity: 1;
+}
+.imageBox {
+  margin: 2.5rem 0;
+}
+.imageBoxGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.imageBox1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.375rem;
+  opacity: 1;
+  background-color: rgb(255 255 255);
+  padding: 2rem 1.25rem 1.25rem 1.25rem;
+}
+.freeCourse {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.25rem;
+}
+.imageDescription {
+  line-break: strict;
+  word-break: keep-all;
+  color:rgb(55 65 81);
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  overflow-wrap: break-word;
+  font-size: 1rem;
+}
+.thirdAreaBox {
+  margin-top: 8rem;
+}
+.contentGridBox {
+  margin: 2.5rem 0;
+  display: grid;
+  gap: 2.5rem;
+}
+.firstContentGridBox {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+}
+.whiteBox2 {
+  min-height: 250px;
+  background-color: rgb(249 250 251);
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+.h4Box {
+  color: rgb(107 114 128);
+  opacity: 1;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem 0;
+  background-color: rgb(255 255 255);
+}
+.w-100 {
+  width: 20px;
+  max-width: 20px;
+  vertical-align: middle;
+}
+.menuHover:hover {
+  color: rgb(55 65 81);
+}
+.checkListFlexBox {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1rem;
+  margin-left: 0.75rem;
+}
+.checkList {
+  display: flex;
+  align-items: center;
+  color: rgb(31 41 55);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.checkImg {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  display: block;
+  vertical-align: middle;
+}
+.macBox {
+  background-color: rgb(55 65 81);
+  border-radius: 0.375rem;
+}
+.topBox {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 0.375rem;
+  border-top-left-radius: 0.375rem;
+  background-color: rgb(75 85 99);
+  padding: 0.5rem;
+}
+.colorCircleBox {
+  display: grid;
+  left: 0.75rem;
+  width: 3rem;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 0.25rem;
+  position: absolute;
+}
+.redCircle {
+  background-color: rgb(239 68 68);
+  border-radius: 9999px;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+.yellowCircle {
+  background-color: rgb(253 224 71);
+  border-radius: 9999px;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+.greenCircle {
+  background-color: rgb(34 197 94);
+  border-radius: 9999px;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+.w-span {
+  color: rgb(255 255 255);
+  font-weight: 500;
+  text-align: center;
+}
+.bottomBox {
+  color: rgb(255 255 255);
+  margin: 0.75rem;
+
+}
+.bottomInnerBox {
+  font-family: monospace;
+  margin-left: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.t-pink {
+  font-weight: 500;
+  color: rgb(244 114 182);
+}
+.t-sky {
+  color: rgb(0 255 255);
+  font-weight: 500;
+}
+.ml-10 {
+  margin-left: 2.5rem;
+}
+.lastWhiteBox {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  padding: 2.75rem 0.5rem;
+  background-color: rgb(255 255 255);
+  border-radius: 0.375rem;
+  width: 100%;
+}
+.flexItemBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mr-5 {
+  margin-right: 1.25rem;
+  color: rgb(59 130 246);
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.wh {
+  width: 1.5rem;
+  font-size: 2em;
+  overflow: visible;
+  vertical-align: middle;
+  height: 1.5rem;
+}
+.forthAreaBox {
+  margin-top: 8rem;
+}
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.bg-grid {
+  display: grid;
+  gap: 1rem;
+}
+.bg-flexbox {
+  display: flex;
+  flex-direction: row;
+  padding: 1.25rem 2rem;
+  background-color: rgb(255 255 255);
+  border-radius: 0.375rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.lbox {
+  width: 20%;
+  margin-bottom: 0;
+}
+.img-ib {
+  display: inline-block;
+  height: 2.5rem;
+  vertical-align: middle;
+  width: 2.5rem;
+  margin-right: 1.25rem;
+}
+.img-ib-r {
+  display: inline-block;
+  height: 2.5rem;
+  vertical-align: middle;
+  width: 2.5rem;
+}
+.rbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  line-height: 1.75rem;
+  flex: 1 1 0%;
+}
+.tx-ul {
+  text-decoration: underline;
+}
+.ft-w {
+  font-weight: 500;
+}
+.sixthAreaBox {
+  margin-top: 8rem;
+}
+.mt-1rem {
+  margin-top: 1rem;
+}
+.screenBox {
+  width: 100%;
+  height: 355px;
+  border-radius: 0.375rem;
+  max-width: 640px;
+  overflow: hidden;
+}
+.screenwh {
+  width: 100%;
+  height: 100%;
+}
+.sevthAreaBox {
+  margin-top: 8rem;
+}
+.h2Box {
+  margin-top: 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #eaeecf;
+  margin-bottom: 16px;
+}
+h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+ul {
+  padding-left: 2em;
+  margin-top: 0;
+  margin-bottom: 16px;
+  list-style-position: inside;
+  list-style-type: disc;
+  list-style: initial;
+}
+li {
+  margin-top: 0.25em;
+  margin-bottom: 0.75rem;
+}
+li > a {
+  text-decoration: underline;
+}
+hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+  box-sizing: initial;
+}
+.eigthAreaBox {
+  margin-top: 10rem;
+}
+.ccBox {
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-start;
+ margin-bottom: 3.5rem;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-row h3 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  margin-right: 1.75rem;
+}
+.flex-mt-0 {
+  display: flex;
+  margin-top: 0;
+  padding-bottom: 5px;
+}
+.flex-align-c {
+  display: flex;
+  align-items: flex-end;
+}
+.flex-align-c img {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;;
+}
+.flex-align-c span {
+  display: inline-flex;
+  align-items: flex-end;
+  font-weight: 500;
+  margin-left: 0.25rem;
+}
+.ml-5 {
+  margin-left: 1.25rem;
+}
+.allOpenButton {
+  color:rgb(59 130 246);
+  opacity: 1;
+  font-weight: 600;
+  padding: 0.25rem 1rem;
+  border-width: 2px;
+  border-radius: 9999px;
+  cursor: pointer;
+  border-color:rgb(59 130 246);
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.selectBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.selectBox span:nth-child(1) {
+  text-align: left;
+  letter-spacing: 0.05em;
+  color:rgb(75 85 99);
+  line-height: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 00.875rem;
+  text-transform: uppercase;
+}
+.selectBox img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  display: block;
+  vertical-align: middle;
+  text-align: left;
+}
+.selectBox-whiteBox {
+  border-radius: 0.5rem;
+  border-color: rgb(229 231 235);
+  border-bottom: 1px;
+  width: 100%;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.banner-middle {
+  margin-top: 4rem;
+  padding: 5rem 0;
+  background-color: rgb(239 246 255);
+}
+.banner-middle > div {
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.banner-contentBox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.lft-content {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  text-align: center;
+}
+.bannerA {
+  color: rgb(255 255 255);
+  text-align: center;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding: 0.5rem 0;
+  background-color: rgb(59 130 246);
+  margin: 2rem 0 1rem 0;
+  text-decoration: none;
+  width: 14rem;
+}
+.bannerA:hover {
+  background-color: aqua;
+}
+.bottom-banner {
+  display: flex;
+  position: fixed;
+  z-index: 50;
+  height: 4rem;
+  bottom: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255 255 255);
+  padding: 0.75rem 3.5rem;
+  width: 100%;
+}
+.bottom-banner span {
+  color: rgb(255 255 255);
+  text-align: center;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding: 0.5rem 0;
+  background-color: rgb(59 130 246);
+  text-decoration: none;
+  width: 100%;
+}
+.bottom-banner span:hover{
+  background-color: aqua;
+}
+.contentBox2 {
+  width: 100%;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+.contentInnerBox2 {
+  padding: 4rem 1.5rem;
+  margin: 0 auto;
+  
 }

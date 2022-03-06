@@ -119,3 +119,6 @@ a {
   color: rgb(255 255 255);
   margin: 0;
 }
+.joinBox a:hover {
+  background-color: aqua;
+}
