@@ -8,7 +8,7 @@ footer {
 }
 .ft-gridBox {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
+  grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 3.5rem;
 }
 .ft-gridBox h4 {
@@ -46,11 +46,15 @@ footer {
 .ft-gridBox a:hover{
   color: rgb(55 65 81);
 }
+.ft-gridBox2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+}
 .bottomLogoBox {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 .bottomLogoBox img {
   width: 3.5rem;
