@@ -191,11 +191,7 @@
   text-decoration: inherit;
 }
 .sideBar a:hover {
-<<<<<<< HEAD
-  background-color: aqua;
-=======
   background-color: rgba(37, 99, 235, 0.7);
->>>>>>> FEstudyBranch
 }
 .section {
   display: flex;
@@ -397,16 +393,10 @@
   display: flex;
   align-items: center;
   color: rgb(31 41 55);
-<<<<<<< HEAD
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  margin-bottom: 0.75rem;
-=======
   font-size: 1rem;
   line-height: 1.25rem;
   margin-bottom: 0.75rem;
   font-weight: 00;
->>>>>>> FEstudyBranch
 }
 .checkImg {
   width: 1rem;
@@ -737,11 +727,7 @@ hr {
   width: 14rem;
 }
 .bannerA:hover {
-<<<<<<< HEAD
-  background-color: aqua;
-=======
   background-color: rgba(37, 99, 235, 0.7);
->>>>>>> FEstudyBranch
 }
 .bottom-banner {
   display: flex;
@@ -987,11 +973,7 @@ footer {
   height: 83.33333%;
   position: relative;
 }
-<<<<<<< HEAD
-.mainTextBox::before {
-=======
 .mainTextBox::after {
->>>>>>> FEstudyBranch
   content: "";
   width: 8%;
   height: 10%;
@@ -1000,12 +982,8 @@ footer {
   bottom: 0;
   transform-origin: left bottom;
   transform: rotate(45deg);
-<<<<<<< HEAD
-  box-shadow: 3px 3px 3px gray;
-=======
   box-shadow: 3px 3px 3px -1px gray;
   border-radius: 0.375rem;
->>>>>>> FEstudyBranch
 }
 .mainFlexBox {
   display: flex;
@@ -1031,8 +1009,5 @@ footer {
   text-decoration: underline;
   margin: 0 0 0 1.2rem;
   font-size: 0.8rem;
-<<<<<<< HEAD
-=======
   font-weight: 700;
->>>>>>> FEstudyBranch
 }
