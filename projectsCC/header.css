@@ -59,7 +59,10 @@ a {
   margin-left: 2rem;
 }
 .headerBox img {
+<<<<<<< HEAD
   display: block;
+=======
+>>>>>>> FEstudyBranch
   vertical-align: middle;
   max-width: 100%;
   height: 2rem;
@@ -118,7 +121,11 @@ a {
   margin: 0;
 }
 .joinBox a:hover {
+<<<<<<< HEAD
   background-color: aqua;
+=======
+  background-color: rgba(37, 99, 235, 0.7);
+>>>>>>> FEstudyBranch
 }
 .rightbtimg {
   width: 4rem;
@@ -141,5 +148,9 @@ a {
   padding: 0.75rem;
 }
 .leftbta:hover {
+<<<<<<< HEAD
   background-color: aqua;
+=======
+  background-color: rgba(37, 99, 235, 0.7);
+>>>>>>> FEstudyBranch
 }

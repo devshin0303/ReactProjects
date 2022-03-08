@@ -8,7 +8,7 @@ footer {
 }
 .ft-gridBox {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 3.5rem;
 }
 .ft-gridBox h4 {
@@ -33,24 +33,28 @@ footer {
   list-style: none;
 }
 .ft-gridBox a {
-    opacity: 1;
-    color: rgb(107 114 128);
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    align-items: center;
-    border-bottom-width: 2px;
-    border-color: transparent;
-    text-decoration: inherit;
+  opacity: 1;
+  color: rgb(107 114 128);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  align-items: center;
+  border-bottom-width: 2px;
+  border-color: transparent;
+  text-decoration: inherit;
 }
-.ft-gridBox a:hover{
+.ft-gridBox a:hover {
   color: rgb(55 65 81);
+}
+.ft-gridBox2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .bottomLogoBox {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 .bottomLogoBox img {
   width: 3.5rem;
@@ -86,7 +90,7 @@ footer {
   color: rgb(156, 163, 175);
   height: 1.5rem;
 }
-.r-IconBox :nth-child(n+2) {
+.r-IconBox :nth-child(n + 2) {
   margin-left: 1.5rem;
 }
 .r-IconBox svg {
