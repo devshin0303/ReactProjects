@@ -5,7 +5,7 @@ const todoList = document.getElementById("todoList"); //ul element 가져오기
 let toDos = [];
 
 function deleteTodo(event) {
-  const li = event.target.parentNode;
+  const li = event.target.parentNode; //현재 target은 button / button의 parentNide는 li
   li.remove();
   toDos = toDos.filter((todo) => todo.id !== parseInt(li.id));
   saveTodos();
@@ -13,7 +13,7 @@ function deleteTodo(event) {
 }
 
 function saveTodos() {
-  localStorage.setItem("todos", JSON.stringify(toDos));
+  localStorage.setItem("todos", JSON.stringify(toDos)); //localstorage에 저장 key: "todos" value는 :
 }
 
 function paintTodo(newTodo) {
@@ -37,7 +37,7 @@ function handleTodoSubmit(event) {
   const newTodoObj = {
     text: newTodo,
     id: Date.now(),
-  };
+  }; //어떤 list를 삭제할지 구분하기 위해
   toDos.push(newTodoObj);
   paintTodo(newTodoObj); //사용자로부터 입력 받은 값을 argument로 받는다.
   saveTodos();
