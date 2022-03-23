@@ -17,7 +17,8 @@
     function App() {
       const [counter, setCounter] = React.useState(0);
       const onClick = () => {
-        setCounter(counter + 1);
+        // setCounter(counter + 1);
+        setCounter((current) => current + 1); // setCounter(counter + 1) 과 동일하지만 위의 방법 보다 안전하다. 리엑트가 이 current가 확실히 현재값이라는 걸
       };
       return (
         <div>
@@ -27,21 +28,5 @@
       );
     }
     ReactDOM.render(<App />, root);
-    // -------------------------------------------------------------
-    // let counter = 0;
-    // function countUp() {
-    //   counter += 1;
-    //   render();
-    // }
-    // function render() {
-    //   ReactDOM.render(<Container />, root);
-    // }
-    // const Container = () => (
-    //   <div>
-    //     <h3>Toatal Click: {counter}</h3>
-    //     <button onClick={countUp}>Click me</button>
-    //   </div>
-    // );
-    // render();
   </script>
 </html>
