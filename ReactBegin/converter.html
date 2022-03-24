@@ -57,8 +57,15 @@
     }
     function KmToMiles() {
       const [distance, setDistance] = React.useState();
-      const ktm = (event) => {
+      const [flipped, setFlipped] = React.useState(false);
+      const onFlip = (currentValue) => {
+        setFlipped((currentValue) => !currentValue);
+        reset();
+      };
+      const reset = () => setDistance(0);
+      const onChange = (event) => {
         setDistance(event.target.value);
+        // console.log(distance);
       };
       return (
         <div>
@@ -68,8 +75,9 @@
               id="km"
               placeholder="KM"
               type="number"
-              value={distance}
-              onChange={ktm}
+              value={flipped ? distance * 1.609 : distance}
+              onChange={onChange}
+              disabled={flipped}
             />
           </div>
           <div>
@@ -78,16 +86,18 @@
               id="mile"
               placeholder="MILES"
               type="number"
-              value={setDistance}
+              value={flipped ? distance : (distance / 1.609).toFixed(1)}
+              onChange={onChange}
+              disabled={!flipped}
             />
           </div>
-          <button>Reset</button>
-          <button>Flip</button>
+          <button onClick={reset}>Reset</button>
+          <button onClick={onFlip}>Flip</button>
         </div>
       );
     }
     function App() {
-      const [index, setIndex] = React.useState("xx");
+      const [index, setIndex] = React.useState("1");
       const onSelect = (event) => setIndex(event.target.value);
       return (
         <div>
