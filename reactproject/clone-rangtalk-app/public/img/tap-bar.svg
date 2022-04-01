@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="64.5" viewBox="0 0 1920 64.5">
+    <path data-name="사각형 12885" transform="translate(0 .5)" style="fill:#fff" d="M0 0h1920v64H0z"/>
+    <g data-name="그룹 2902" transform="translate(634 -7091.5)">
+        <rect data-name="사각형 12886" width="93" height="36" rx="17" transform="translate(397 7105)" style="fill:none"/>
+        <text transform="translate(411 7130)" style="font-size:18px;font-family:NotoSansCJKkr-Bold,Noto Sans CJK KR;font-weight:700;letter-spacing:-.024em;fill:#5fc6be"><tspan x="0" y="0">학교랑톡</tspan></text>
+    </g>
+    <g data-name="그룹 2900" transform="translate(357 -7091.5)">
+        <rect data-name="사각형 12886" width="93" height="36" rx="17" transform="translate(557 7106)" style="fill:#71a5d9"/>
+        <text transform="translate(571 7131)" style="font-size:18px;font-family:NotoSansCJKkr-Bold,Noto Sans CJK KR;font-weight:700;letter-spacing:-.024em;fill:#fff"><tspan x="0" y="0">쌤이랑톡</tspan></text>
+    </g>
+    <g data-name="그룹 2904" transform="translate(90 -7091.5)">
+        <rect data-name="사각형 12886" width="93" height="36" rx="17" transform="translate(707 7105)" style="fill:none"/>
+        <text transform="translate(721 7130)" style="fill:#a87cff;font-size:18px;font-family:NotoSansCJKkr-Bold,Noto Sans CJK KR;font-weight:700;letter-spacing:-.024em"><tspan x="0" y="0">아이랑톡</tspan></text>
+    </g>
+    <path data-name="선 156" transform="translate(0 .5)" style="stroke:#efefef;fill:none" d="M0 0h1920"/>
+</svg>
