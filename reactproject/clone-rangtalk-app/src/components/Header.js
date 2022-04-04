@@ -6,14 +6,16 @@ import { AppBar } from "@mui/material";
 
 const Header = () => {
   return (
-    <header>
-      <Paper elevation={0} variant="outlined">
-        <AppBar position="sticky" color="inherit">
-          <MainGnb />
-        </AppBar>
-      </Paper>
-      <SubGnb />
-    </header>
+    <div>
+      <header>
+        <Paper elevation={0} variant="outlined">
+          <AppBar position="sticky" color="inherit">
+            <MainGnb />
+          </AppBar>
+        </Paper>
+        <SubGnb />
+      </header>
+    </div>
   );
 };
 
