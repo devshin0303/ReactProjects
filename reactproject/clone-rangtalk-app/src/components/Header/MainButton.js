@@ -5,13 +5,12 @@ const MainButton = styled(Button)({
   "&:hover": {
     backgroundColor: "rgba(0, 0, 0, 0.04)",
   },
-  fontWeight: "600",
   color: "black",
   fontSize: "16px",
   boxSizing: "border-box",
   marginLeft: "45px",
-  fontFamily: "NotoSansCJKkr",
   variant: "text",
+  lineHeight: 1.25,
 });
 
 export default MainButton;

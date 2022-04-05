@@ -14,6 +14,8 @@ const SubGnb = () => {
               borderRadius: "9999PX",
               textAlign: "center",
               margin: "0 16px",
+              backgroundColor: "#71a5d9",
+              fontWeight: "bold",
             }}
           >
             쌤이랑톡

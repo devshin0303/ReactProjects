@@ -26,7 +26,17 @@ const MainGnb = () => {
             <MainButton>다운로드</MainButton>
             <MainButton>문의접수</MainButton>
             <Box marginLeft="40px">
-              <Button variant="contained" component="span">
+              <Button
+                variant="contained"
+                component="span"
+                sx={{
+                  textAlign: "center",
+                  width: "100px",
+                  margin: "0 16px",
+                  bgcolor: "#71a5d9",
+                  fontWeight: "bold",
+                }}
+              >
                 로그인
               </Button>
             </Box>
