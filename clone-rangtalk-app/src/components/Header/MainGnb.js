@@ -4,7 +4,7 @@ import MainButton from "./MainButton";
 
 const MainGnb = () => {
   return (
-    <Toolbar sx={{ borderBottom: 1 }}>
+    <Toolbar sx={{ border: "1px solid rgba(0, 0, 0, 0.12)" }}>
       <Container maxWidth="lg">
         <Box
           display="flex"

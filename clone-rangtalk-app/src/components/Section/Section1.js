@@ -56,10 +56,19 @@ const Section1 = () => {
             시간과 장소의 제약이 없어 업무 효율성을 높여주고, <br />
             선생님과 학부모, 학생간의 양방향 소통을 가능하게 해줍니다.
           </Typography>
-          <Button variant="contained" sx={{ width: "150px" }}>
+          <Button
+            variant="contained"
+            sx={{
+              width: "150px",
+              bgcolor: "#fff",
+              color: "black",
+              fontWeight: "bold",
+              mt: "50px",
+            }}
+          >
             다운로드
           </Button>
-          <Button variant="contained">온라인 청약</Button>
+          {/* <Button variant="contained">온라인 청약</Button> */}
         </Box>
       </Container>
     </Box>
