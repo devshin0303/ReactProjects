@@ -1,6 +1,17 @@
-import { Box, Button, CardMedia, Container, Toolbar } from "@mui/material";
+import {
+  Box,
+  Button,
+  CardMedia,
+  Container,
+  Hidden,
+  Toolbar,
+} from "@mui/material";
 import React from "react";
 import MainButton from "./MainButton";
+import "../../styles/font.css";
+import styled from "@emotion/styled";
+
+// @MainGnb : header 상단 네비게이션 bar
 
 const MainGnb = () => {
   return (
@@ -12,35 +23,50 @@ const MainGnb = () => {
           justifyContent="space-between"
           boxSizing="border-box"
         >
+          {/*main logo image box */}
           <Box display="flex" justifyContent="flex-start" alignItems="center">
             <CardMedia
               component="img"
               height="22"
-              image="img/img_fulllogo_big.svg"
+              image="img/img_fulllogo_big/img_fulllogo_big@2x.png"
               alt="logoImg"
             ></CardMedia>
           </Box>
-          <Box display="flex" justifyContent="center" alignItems="center" p={1}>
-            <MainButton>랑톡소개</MainButton>
-            <MainButton>FAQ</MainButton>
-            <MainButton>다운로드</MainButton>
-            <MainButton>문의접수</MainButton>
-            <Box marginLeft="40px">
-              <Button
-                variant="contained"
-                component="span"
-                sx={{
-                  textAlign: "center",
-                  width: "100px",
-                  margin: "0 16px",
-                  bgcolor: "#71a5d9",
-                  fontWeight: "bold",
-                }}
-              >
-                로그인
-              </Button>
+
+          {/* Hidden component를 사용하여 상단 navigation bar를 md 사이즈 이하일 때 visible : none 처리 */}
+          <Hidden mdDown>
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              p={1}
+            >
+              <Box>
+                <MainButton>랑톡소개</MainButton>
+                <MainButton>FAQ</MainButton>
+                <MainButton>다운로드</MainButton>
+                <MainButton>문의접수</MainButton>
+              </Box>
+              <Box marginLeft="40px">
+                <Button
+                  variant="contained"
+                  component="span"
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: "rgba(113, 165, 217, 0.7)",
+                    },
+                    textAlign: "center",
+                    width: "100px",
+                    bgcolor: "#71a5d9",
+                    fontWeight: "bold",
+                    fontFamily: "Noto Sans KR",
+                  }}
+                >
+                  로그인
+                </Button>
+              </Box>
             </Box>
-          </Box>
+          </Hidden>
         </Box>
       </Container>
     </Toolbar>

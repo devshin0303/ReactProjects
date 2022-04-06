@@ -17,7 +17,7 @@ const Section2 = () => {
           component="iframe"
           src="https://www.youtube.com/embed/K8qE0Ved5ZI"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           width="1116"
           height="599"
         ></CardMedia>

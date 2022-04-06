@@ -1,104 +1,99 @@
-import * as React from "react";
-import { styled } from "@mui/material/styles";
-import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
-import MuiAccordion from "@mui/material/Accordion";
-import MuiAccordionSummary from "@mui/material/AccordionSummary";
-import MuiAccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Container,
+  Paper,
+  Typography,
+} from "@mui/material";
+import { Box } from "@mui/system";
+import React from "react";
+import "../../styles/font.css";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const Accordion = styled((props) => (
-  <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
-  border: `1px solid ${theme.palette.divider}`,
-  "&:not(:last-child)": {
-    borderBottom: 0,
-  },
-  "&:before": {
-    display: "none",
-  },
-}));
-
-const AccordionSummary = styled((props) => (
-  <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
-    {...props}
-  />
-))(({ theme }) => ({
-  backgroundColor:
-    theme.palette.mode === "dark"
-      ? "rgba(255, 255, 255, .05)"
-      : "rgba(0, 0, 0, .03)",
-  flexDirection: "row-reverse",
-  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-    transform: "rotate(90deg)",
-  },
-  "& .MuiAccordionSummary-content": {
-    marginLeft: theme.spacing(1),
-  },
-}));
-
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(2),
-  borderTop: "1px solid rgba(0, 0, 0, .125)",
-}));
-
-export default function Section4() {
-  const [expanded, setExpanded] = React.useState("panel1");
-
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
-
+const Section4 = () => {
   return (
-    <div>
-      <Accordion
-        expanded={expanded === "panel1"}
-        onChange={handleChange("panel1")}
-      >
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>Collapsible Group Item #1</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={expanded === "panel2"}
-        onChange={handleChange("panel2")}
-      >
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography>Collapsible Group Item #2</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={expanded === "panel3"}
-        onChange={handleChange("panel3")}
-      >
-        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography>Collapsible Group Item #3</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-    </div>
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      pt={15}
+      bgcolor="#e1e7ea"
+    >
+      <Container maxWidth="lg" sx={{ height: "100vh" }}>
+        <Typography
+          variant="h5"
+          fontFamily="Noto Sans KR"
+          fontWeight="400"
+          fontSize="20px"
+        >
+          랑톡의 FAQ
+        </Typography>
+        <Typography
+          variant="h1"
+          fontFamily="Noto Sans KR"
+          fontWeight={400}
+          fontSize="56px"
+        >
+          자주묻는 <b>질문</b>
+        </Typography>
+        <Paper
+          elevation={0}
+          variant="outlined"
+          sx={{ mt: "38px", overflow: "scroll" }}
+        >
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>01.통화 요금이 궁금합니다.</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                학교랑톡 통화 요금은 아래와 같습니다. (VAT 포함) ㅁ 이너텔
+                C-type형 시내 : 42.9원/3분 시외 : 42.9원3분(30km 미만),
+                15.95원/10초(30km 이상) 이동전화 : 15.95원/10초 ㅁ
+                기업인터넷전화 Centrex형 시내/시외 : 41.6원/3분(5년 약정시)
+                이동전화 : 13.6원/10초(5년 약정시)
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
+              <Typography>02. KT 통신사가 아니여도 사용 가능한가요?</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                학교랑톡은 통신사, 단말 OS 상관없이 모두 이용이 가능합니다.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel3a-content"
+              id="panel3a-header"
+            >
+              <Typography>03. 로그인 비밀번호를 모르겠어요.</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                화면 중앙에 있는 '비밀번호를 잊으셨나요?' 선택 시, 비밀번호
+                변경이 가능합니다. 새 비밀번호 설정 시, 휴대폰 인증이
+                필요합니다.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        </Paper>
+      </Container>
+    </Box>
   );
-}
+};
+
+export default Section4;
