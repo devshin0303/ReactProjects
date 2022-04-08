@@ -1,8 +1,6 @@
-import { ThemeContext } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Button } from "@mui/material";
-import { green } from "@mui/material/colors";
-import "../../styles/font.css";
+import "../../../styles/font.css";
 
 const MainButton = styled(Button)({
   "&:hover": {

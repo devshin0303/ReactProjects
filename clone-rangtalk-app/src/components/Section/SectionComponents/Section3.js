@@ -1,6 +1,6 @@
 import { Box, CardMedia, Container, Typography } from "@mui/material";
 import React from "react";
-import "../../styles/font.css";
+import "../../../styles/font.css";
 
 const Section3 = () => {
   return (

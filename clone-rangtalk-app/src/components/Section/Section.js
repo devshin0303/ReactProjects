@@ -1,8 +1,9 @@
 import React from "react";
-import Section1 from "./Section1";
-import Section2 from "./Section2";
-import Section3 from "./Section3";
-import Section4 from "./Section4";
+import Section1 from "./SectionComponents/Section1";
+import Section2 from "./SectionComponents/Section2";
+import Section3 from "./SectionComponents/Section3";
+import Section4 from "./SectionComponents/Section4";
+import Section5 from "./SectionComponents/Section5";
 
 const Section = () => {
   return (
@@ -11,6 +12,7 @@ const Section = () => {
       <Section2 />
       <Section3 />
       <Section4 />
+      <Section5 />
     </>
   );
 };

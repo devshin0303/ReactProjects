@@ -1,12 +1,12 @@
 import { Button, Container, Toolbar, Box } from "@mui/material";
 import React from "react";
-import "../../styles/font.css";
+import "../../../styles/font.css";
 
-export const SubGnb = () => {
+const SubGnb = () => {
   return (
     <Toolbar
       sx={{
-        diplay: "flex",
+        display: "flex",
         alignItems: "center",
         justifyContent: "center",
       }}

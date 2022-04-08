@@ -8,8 +8,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import MainButton from "./MainButton";
-import "../../styles/font.css";
-import styled from "@emotion/styled";
+import "../../../styles/font.css";
 
 // @MainGnb : header 상단 네비게이션 bar
 
