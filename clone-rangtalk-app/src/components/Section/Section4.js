@@ -47,8 +47,12 @@ const Section4 = () => {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              sx={{ height: "64px", padding: "18px 0" }}
+              fontFamily="Noto Sans KR"
             >
-              <Typography>01.통화 요금이 궁금합니다.</Typography>
+              <Typography fontFamily="Noto Sans KR">
+                01.통화 요금이 궁금합니다.
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
