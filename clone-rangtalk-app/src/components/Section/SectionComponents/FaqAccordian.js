@@ -7,7 +7,7 @@ import {
 import React from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const FaqAccordian = ({ firstTypo, secondTypo }) => {
+const FaqAccordian = ({ firstText, secondText }) => {
   return (
     <Accordion>
       <AccordionSummary
@@ -16,11 +16,11 @@ const FaqAccordian = ({ firstTypo, secondTypo }) => {
         id="panel1a-header"
         sx={{ height: "64px", padding: "18px 0" }}
       >
-        <Typography fontFamily="Noto Sans KR">{firstTypo}</Typography>
+        <Typography fontFamily="Noto Sans KR">{firstText}</Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Typography component="pre" variant="body1" padding="20px 0">
-          {secondTypo}
+          {secondText}
         </Typography>
       </AccordionDetails>
     </Accordion>

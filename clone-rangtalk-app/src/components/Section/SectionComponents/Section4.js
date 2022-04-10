@@ -3,6 +3,7 @@ import { Box } from "@mui/system";
 import React from "react";
 import "../../../styles/font.css";
 import FaqAccordian from "./FaqAccordian";
+import PropTypes from "prop-types";
 
 const Section4 = () => {
   return (
@@ -41,8 +42,8 @@ const Section4 = () => {
           }}
         >
           <FaqAccordian
-            firstTypo="01. 통화 요금이 궁금합니다."
-            secondTypo="학교랑톡 통화 요금은 아래와 같습니다. (VAT 포함)
+            firstText="01. 통화 요금이 궁금합니다."
+            secondText="학교랑톡 통화 요금은 아래와 같습니다. (VAT 포함)
 ㅁ 이너텔 C-type형
 시내 : 42.9원/3분
 시외 : 42.9원3분(30km 미만), 15.95원/10초(30km 이상)
@@ -56,6 +57,11 @@ const Section4 = () => {
       </Container>
     </Box>
   );
+};
+
+FaqAccordian.propTypes = {
+  firstText: PropTypes.string.isRequired,
+  secondText: PropTypes.string.isRequired,
 };
 
 export default Section4;

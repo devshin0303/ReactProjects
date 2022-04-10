@@ -4,6 +4,7 @@ import Section2 from "./SectionComponents/Section2";
 import Section3 from "./SectionComponents/Section3";
 import Section4 from "./SectionComponents/Section4";
 import Section5 from "./SectionComponents/Section5";
+import Section6 from "./SectionComponents/Section6";
 
 const Section = () => {
   return (
@@ -13,6 +14,7 @@ const Section = () => {
       <Section3 />
       <Section4 />
       <Section5 />
+      <Section6 />
     </>
   );
 };
