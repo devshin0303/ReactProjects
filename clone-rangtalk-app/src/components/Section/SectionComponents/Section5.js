@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 const Section5 = () => {
   return (
     <Box
+      id="downloadSection"
       sx={{
         backgroundImage:
           'url("img/img_bottom_phone/img_bottom_phone_02@2x.png")',

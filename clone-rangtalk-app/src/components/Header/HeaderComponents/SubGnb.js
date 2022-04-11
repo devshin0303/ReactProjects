@@ -1,8 +1,10 @@
 import { Button, Container, Toolbar, Box } from "@mui/material";
 import React from "react";
 import "../../../styles/font.css";
+import SubButton from "./SubButton";
+import PropTypes from "prop-types";
 
-const SubGnb = () => {
+const SubGnb = ({ txtColor, btnColor, text }) => {
   return (
     <Toolbar
       sx={{
@@ -13,7 +15,26 @@ const SubGnb = () => {
     >
       <Container maxWidth="lg">
         <Box display="flex" justifyContent="center" alignItems="center">
-          <Button
+          {/* <SubButton text="아이랑톡"></SubButton> */}
+          <SubButton
+            text={text}
+            txtColor={txtColor}
+            btnColor={btnColor}
+          ></SubButton>
+        </Box>
+      </Container>
+    </Toolbar>
+  );
+};
+
+SubButton.propTypes = {
+  text: PropTypes.string.isRequired,
+};
+
+export default SubGnb;
+
+{
+  /* <Button
             variant="contained"
             sx={{
               borderRadius: "9999PX",
@@ -54,11 +75,5 @@ const SubGnb = () => {
             }}
           >
             학교랑톡
-          </Button>
-        </Box>
-      </Container>
-    </Toolbar>
-  );
-};
-
-export default SubGnb;
+          </Button> */
+}

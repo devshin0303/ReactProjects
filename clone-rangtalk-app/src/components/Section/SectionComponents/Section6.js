@@ -6,6 +6,7 @@ import "../../../styles/font.css";
 const Section6 = () => {
   return (
     <Box
+      id="supportSection"
       sx={{
         backgroundColor: "#ffffff",
         pt: 10,

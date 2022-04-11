@@ -8,6 +8,7 @@ import PropTypes from "prop-types";
 const Section4 = () => {
   return (
     <Box
+      id="faqSection"
       display="flex"
       alignItems="center"
       justifyContent="center"

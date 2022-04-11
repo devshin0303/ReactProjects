@@ -5,6 +5,7 @@ import "../../../styles/font.css";
 const Section3 = () => {
   return (
     <Box
+      id="introSection"
       display="flex"
       alignItems="center"
       justifyContent="center"

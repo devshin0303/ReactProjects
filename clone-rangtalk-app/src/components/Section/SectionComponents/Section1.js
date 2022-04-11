@@ -2,6 +2,7 @@ import { Button, Container, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import "../../../styles/font.css";
+import { Link } from "react-scroll";
 
 const Section1 = () => {
   return (
@@ -53,6 +54,7 @@ const Section1 = () => {
             fontFamily="Noto Sans KR"
             noWrap={true}
             fontSize="20px"
+            sx={{ color: "#3e3e3e" }}
           >
             <strong>
               랑톡(Rangtalk)은 학교 유선 전화를 개인 스마트폰에서 사용할 수 있는
@@ -63,24 +65,27 @@ const Section1 = () => {
             시간과 장소의 제약이 없어 업무 효율성을 높여주고, <br />
             선생님과 학부모, 학생간의 양방향 소통을 가능하게 해줍니다.
           </Typography>
-          <Button
-            variant="contained"
-            sx={{
-              "&:hover": {
-                boxShadow: "0 3px 2px 2px rgb(0 0 0 / 20%)",
-                backgroundColor: "#fff",
-              },
-              width: "150px",
-              height: "50px",
-              bgcolor: "#fff",
-              color: "black",
-              fontWeight: "bold",
-              mt: "50px",
-              fontFamily: "Noto Sans KR",
-            }}
-          >
-            다운로드
-          </Button>
+          <Link to="downloadSection" spy={true} smooth={true}>
+            <Button
+              variant="contained"
+              sx={{
+                "&:hover": {
+                  boxShadow: "0 3px 2px 2px rgb(0 0 0 / 20%)",
+                  backgroundColor: "#fff",
+                },
+                width: "180px",
+                height: "60px",
+                bgcolor: "#fff",
+                color: "black",
+                fontWeight: "bold",
+                mt: "50px",
+                fontFamily: "Noto Sans KR",
+                fontSize: "18px",
+              }}
+            >
+              다운로드
+            </Button>
+          </Link>
           {/* <Button variant="contained">온라인 청약</Button> */}
         </Box>
       </Container>

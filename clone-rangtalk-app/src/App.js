@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./routes/Home";
+import Rangtalk from "./routes/Rangtalk";
+import Ssamtalk from "./routes/Ssamtalk";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Ssamtalk />}></Route>
+        <Route path="/rangtalk" element={<Rangtalk />}></Route>
       </Routes>
     </Router>
   );
