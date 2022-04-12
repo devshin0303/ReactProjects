@@ -2,7 +2,7 @@ import { CardMedia, Container } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 
-const Section2 = () => {
+const YoutubePlayerSection = () => {
   return (
     <Box
       display="flex"
@@ -26,4 +26,4 @@ const Section2 = () => {
   );
 };
 
-export default Section2;
+export default YoutubePlayerSection;

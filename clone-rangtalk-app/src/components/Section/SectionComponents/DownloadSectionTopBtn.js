@@ -14,7 +14,7 @@ const Btn = styled(MainButton)({
   borderBottom: "none",
 });
 
-const Section5TopBtn = ({ btnName }) => {
+const DownloadSectionTopBtn = ({ btnName }) => {
   const onClick = () => {
     console.log("clicked!!");
   };
@@ -22,4 +22,4 @@ const Section5TopBtn = ({ btnName }) => {
   return <Btn onClick={onClick}>{btnName}</Btn>;
 };
 
-export default Section5TopBtn;
+export default DownloadSectionTopBtn;

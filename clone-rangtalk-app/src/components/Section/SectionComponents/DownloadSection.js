@@ -3,10 +3,10 @@ import { Box } from "@mui/system";
 import React from "react";
 import "../../../styles/font.css";
 import DownloadBtn from "./DownloadBtn";
-import Section5TopBtn from "./Section5TopBtn";
 import PropTypes from "prop-types";
+import DownloadSectionTopBtn from "./DownloadSectionTopBtn";
 
-const Section5 = () => {
+const DownloadSection = () => {
   return (
     <Box
       id="downloadSection"
@@ -38,9 +38,9 @@ const Section5 = () => {
             alignItems="center"
             mb={15}
           >
-            <Section5TopBtn btnName="아이랑톡"></Section5TopBtn>
-            <Section5TopBtn btnName="쌤이랑톡"></Section5TopBtn>
-            <Section5TopBtn btnName="학교랑톡"></Section5TopBtn>
+            <DownloadSectionTopBtn btnName="아이랑톡"></DownloadSectionTopBtn>
+            <DownloadSectionTopBtn btnName="쌤이랑톡"></DownloadSectionTopBtn>
+            <DownloadSectionTopBtn btnName="학교랑톡"></DownloadSectionTopBtn>
           </Box>
           <Box
             display="flex"
@@ -135,7 +135,7 @@ const Section5 = () => {
   );
 };
 
-Section5TopBtn.propTypes = {
+DownloadSectionTopBtn.propTypes = {
   btnName: PropTypes.string.isRequired,
 };
 
@@ -143,4 +143,4 @@ DownloadBtn.propTypes = {
   appMarket: PropTypes.string.isRequired,
 };
 
-export default Section5;
+export default DownloadSection;

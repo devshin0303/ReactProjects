@@ -4,7 +4,7 @@ import React from "react";
 import "../../../styles/font.css";
 import { Link } from "react-scroll";
 
-const Section1 = () => {
+const MainTopSection = () => {
   return (
     <Box
       sx={{
@@ -93,4 +93,4 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default MainTopSection;

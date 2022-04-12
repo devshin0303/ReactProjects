@@ -1,20 +1,20 @@
 import React from "react";
-import Section1 from "./SectionComponents/Section1";
-import Section2 from "./SectionComponents/Section2";
-import Section3 from "./SectionComponents/Section3";
-import Section4 from "./SectionComponents/Section4";
-import Section5 from "./SectionComponents/Section5";
-import Section6 from "./SectionComponents/Section6";
+import MainTopSection from "./SectionComponents/MainTopSection";
+import YoutubePlayerSection from "./SectionComponents/YoutubePlayerSection";
+import IntroRangtalkSection from "./SectionComponents/IntroRangtalkSection";
+import FaqSection from "./SectionComponents/FaqSection";
+import DownloadSection from "./SectionComponents/DownloadSection";
+import ContactSection from "./SectionComponents/ContactSection";
 
 const Section = () => {
   return (
     <>
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <Section6 />
+      <MainTopSection />
+      <YoutubePlayerSection />
+      <IntroRangtalkSection />
+      <FaqSection />
+      <DownloadSection />
+      <ContactSection />
     </>
   );
 };

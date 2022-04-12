@@ -5,7 +5,7 @@ import "../../../styles/font.css";
 import FaqAccordian from "./FaqAccordian";
 import PropTypes from "prop-types";
 
-const Section4 = () => {
+const FaqSection = () => {
   return (
     <Box
       id="faqSection"
@@ -65,4 +65,4 @@ FaqAccordian.propTypes = {
   secondText: PropTypes.string.isRequired,
 };
 
-export default Section4;
+export default FaqSection;
