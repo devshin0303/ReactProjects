@@ -15,10 +15,12 @@ const MyAppBar = styled(AppBar)({
 
 const Header = ({ mainLogoImg, loginBtnColor, txtColor, btnColor, text }) => {
   return (
-    <MyAppBar elevation={0}>
-      <MainGnb mainLogoImg={mainLogoImg} loginBtnColor={loginBtnColor} />
-      <SubGnb txtColor={txtColor} btnColor={btnColor} text={text} />
-    </MyAppBar>
+    <>
+      <MyAppBar elevation={0}>
+        <MainGnb mainLogoImg={mainLogoImg} loginBtnColor={loginBtnColor} />
+        <SubGnb txtColor={txtColor} btnColor={btnColor} text={text} />
+      </MyAppBar>
+    </>
   );
 };
 

@@ -7,6 +7,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Ssamtalk />}></Route>
+        <Route path="/ssamtalk" element={<Ssamtalk />}></Route>
         <Route path="/rangtalk" element={<Rangtalk />}></Route>
       </Routes>
     </Router>

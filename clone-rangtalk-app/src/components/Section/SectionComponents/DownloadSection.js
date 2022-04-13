@@ -2,17 +2,25 @@ import { Button, CardMedia, Container, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import "../../../styles/font.css";
-import DownloadBtn from "./DownloadBtn";
 import PropTypes from "prop-types";
-import DownloadSectionTopBtn from "./DownloadSectionTopBtn";
+import DownloadSectionTopBtn from "./DownloadSectionComponents/DownloadSectionTopBtn";
+import MarketDownloadBtn from "./DownloadSectionComponents/MarketDownloadBtn";
+import { Constants } from "../../constants/Constants";
 
-const DownloadSection = () => {
+const DownloadSection = ({
+  downBackImg,
+  downTopBtnName,
+  downTxtColor,
+  downTalkImg,
+  downManuColor,
+  downText,
+  downdef,
+}) => {
   return (
     <Box
       id="downloadSection"
       sx={{
-        backgroundImage:
-          'url("img/img_bottom_phone/img_bottom_phone_02@2x.png")',
+        backgroundImage: `url(${downBackImg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -38,9 +46,9 @@ const DownloadSection = () => {
             alignItems="center"
             mb={15}
           >
-            <DownloadSectionTopBtn btnName="아이랑톡"></DownloadSectionTopBtn>
-            <DownloadSectionTopBtn btnName="쌤이랑톡"></DownloadSectionTopBtn>
-            <DownloadSectionTopBtn btnName="학교랑톡"></DownloadSectionTopBtn>
+            <DownloadSectionTopBtn
+              downTopBtnName={downTopBtnName}
+            ></DownloadSectionTopBtn>
           </Box>
           <Box
             display="flex"
@@ -52,17 +60,17 @@ const DownloadSection = () => {
               fontFamily="Noto Sans KR"
               noWrap={true}
               fontSize="56px"
-              color="rgb(94, 151, 208)"
+              color={downTxtColor}
               fontWeight="bold"
             >
-              쌤이랑톡
+              {downText}
             </Typography>
             <Box>
               <CardMedia
                 component="img"
                 height="51px"
                 width="50px"
-                image="img/img_bottom_logo/img_bottom_logo_2@2x.png"
+                image={downTalkImg}
                 alt="logoImg"
               ></CardMedia>
             </Box>
@@ -91,7 +99,7 @@ const DownloadSection = () => {
                 },
                 textAlign: "center",
                 width: "100%",
-                bgcolor: "#71a5d9",
+                bgcolor: downManuColor,
                 fontWeight: "bold",
                 fontFamily: "Noto Sans KR",
                 fontSize: "18px",
@@ -105,8 +113,14 @@ const DownloadSection = () => {
               justifyContent="space-between"
               alignItems="center"
             >
-              <DownloadBtn appMarket="img/img_btn_logo_google/img_google.png"></DownloadBtn>
-              <DownloadBtn appMarket="img/img_btn_logo_apple/img_apple.png"></DownloadBtn>
+              <MarketDownloadBtn
+                appMarket={Constants.googlePlay}
+                downText={downText}
+              ></MarketDownloadBtn>
+              <MarketDownloadBtn
+                appMarket={Constants.appStore}
+                downText={downText}
+              ></MarketDownloadBtn>
             </Box>
             <Box>
               <Typography
@@ -121,9 +135,11 @@ const DownloadSection = () => {
                 fontSize="14px"
                 lineHeight="24px"
               >
-                * iOS앱은 ‘설정>일반>기기 관리 (또는 프로파일 및 기기 관리) >
+                * iOS앱은 ‘설정&gt;일반&gt;기기 관리 (또는 프로파일 및 기기&gt;
+                관리) &gt;
                 <br />
-                Helixtech Corp. 에서 ‘신뢰함>신뢰’ 버튼을 꼭 확인해주셔야 어플이
+                Helixtech Corp. 에서 ‘신뢰함&gt;신뢰’ 버튼을 꼭 확인해주셔야
+                어플이
                 <br />
                 정상적으로 실행됩니다.
               </Typography>
@@ -135,11 +151,7 @@ const DownloadSection = () => {
   );
 };
 
-DownloadSectionTopBtn.propTypes = {
-  btnName: PropTypes.string.isRequired,
-};
-
-DownloadBtn.propTypes = {
+MarketDownloadBtn.propTypes = {
   appMarket: PropTypes.string.isRequired,
 };
 

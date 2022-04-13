@@ -4,11 +4,11 @@ import React from "react";
 import "../../../styles/font.css";
 import { Link } from "react-scroll";
 
-const MainTopSection = () => {
+const MainTopSection = ({ backMainImg }) => {
   return (
     <Box
       sx={{
-        backgroundImage: 'url("img/img_back/img_back@2x.jpg")',
+        backgroundImage: `url(${backMainImg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",

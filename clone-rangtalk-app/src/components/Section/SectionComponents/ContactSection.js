@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import React from "react";
 import "../../../styles/font.css";
 
-const Section6 = () => {
+const ContactSection = () => {
   return (
     <Box
       id="supportSection"
@@ -41,4 +41,4 @@ const Section6 = () => {
   );
 };
 
-export default Section6;
+export default ContactSection;

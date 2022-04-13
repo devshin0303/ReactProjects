@@ -2,18 +2,35 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Section from "../components/Section/Section";
 import PropTypes from "prop-types";
+import { Constants } from "../components/constants/Constants";
+import { RANG } from "../components/constants/rang";
 
 function Rangtalk() {
   return (
     <>
       <Header
-        mainLogoImg="img/img_rangtalkmain_img/img_fulllogo_big@2x.png"
-        loginBtnColor="rgba(95, 198, 190)"
-        txtColor="#fff"
-        btnColor="rgb(95, 198, 190)"
-        text="학교랑톡"
+        mainLogoImg={RANG.mainLogo}
+        loginBtnColor={Constants.schoolMainColor}
+        txtColor={Constants.white}
+        btnColor={Constants.schoolMainColor}
+        text={Constants.school}
       />
-      <Section />
+      <Section
+        backMainImg={Constants.section.schoolBackMainImg}
+        introBackColor={Constants.section.schoolIntroBgColor}
+        introPhoneImg={Constants.section.schoolPhoneImg}
+        introTextBgColor={Constants.section.schoolIntroTextBgC}
+        introTextColor={Constants.schoolMainColor}
+        introNoticeImg={Constants.section.schoolIntroNoticeImg}
+        introCommuImg={Constants.section.schoolIntroCommuImg}
+        introEmergencyImg={Constants.section.schoolIntroEmerImg}
+        downTopBtnName={Constants.school}
+        downBackImg={Constants.section.schoolBottomPhone}
+        downTxtColor={Constants.schoolMainColor}
+        downTalkImg={Constants.section.schoolBottomTalkImg}
+        downManuColor={Constants.schoolMainColor}
+        downText={Constants.school}
+      />
       <Footer />
     </>
   );

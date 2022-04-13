@@ -1,10 +1,10 @@
 import { Button, styled } from "@mui/material";
-
 import "../../../styles/font.css";
-import { Link } from "react-router-dom";
-import { useTheme } from "@emotion/react";
+import { Link as RouterLink } from "react-router-dom";
+import { Link } from "@mui/material";
+import { Constants } from "../../constants/Constants";
 
-let SubBtn = styled(Button)((props) => ({
+const SubBtn = styled(Button)((props) => ({
   "&:hover": {
     backgroundColor: props.btnbgcolor,
   },
@@ -24,25 +24,51 @@ let SubBtn = styled(Button)((props) => ({
 }));
 
 const SubButton = ({ text, txtColor, btnColor }) => {
-  if (text === "쌤이랑톡") {
+  // const location = window.location.pathname;
+
+  // console.log(txtColor);
+  // console.log(btnColor);
+
+  // return (
+  //   <>
+  //     <SubBtn txtcolor="#a87cff" btnbgcolor="inherit">
+  //       아이랑톡
+  //     </SubBtn>
+  //     <SubBtn txtcolor={txtColor} to="/ssamtalk" btnbgcolor={btnColor}>
+  //       쌤이랑톡
+  //     </SubBtn>
+  //     <Link component={RouterLink} to="/rangtalk" underline="none">
+  //       <SubBtn txtcolor="rgb(95, 198, 190)" btnbgcolor="inherit">
+  //         학교랑톡
+  //       </SubBtn>
+  //     </Link>
+  //   </>
+  // );
+
+  if (text === Constants.ssam) {
     return (
       <>
+        <SubBtn txtcolor="#a87cff" btnbgcolor="inherit">
+          아이랑톡
+        </SubBtn>
         <SubBtn txtcolor={txtColor} btnbgcolor={btnColor}>
           {text}
         </SubBtn>
-        <Link to="/rangtalk" sx={{ textDecorationLine: "none" }}>
-          <SubBtn txtcolor="rgb(95, 198, 190)">학교랑톡</SubBtn>
+        <Link component={RouterLink} to="/rangtalk" underline="none">
+          <SubBtn txtcolor="rgb(95, 198, 190)" btnbgcolor="inherit">
+            학교랑톡
+          </SubBtn>
         </Link>
       </>
     );
-  } else if (text === "학교랑톡") {
+  } else if (text === Constants.school) {
     return (
       <>
-        <Link to="/">
-          <SubBtn
-            txtcolor="rgb(113, 165, 217)"
-            sx={{ textDecorationLine: "none" }}
-          >
+        <SubBtn txtcolor="#a87cff" btnbgcolor="inherit">
+          아이랑톡
+        </SubBtn>
+        <Link to="/ssamtalk" underline="none" component={RouterLink}>
+          <SubBtn txtcolor="rgb(113, 165, 217)" btnbgcolor="inherit">
             쌤이랑톡
           </SubBtn>
         </Link>

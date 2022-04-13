@@ -2,7 +2,7 @@ import { Container, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import "../../../styles/font.css";
-import FaqAccordian from "./FaqAccordian";
+import FaqAccordian from "./FaqSectionComponents/FaqAccordian";
 import PropTypes from "prop-types";
 
 const FaqSection = () => {

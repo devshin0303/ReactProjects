@@ -2,7 +2,15 @@ import { Box, CardMedia, Container, Typography } from "@mui/material";
 import React from "react";
 import "../../../styles/font.css";
 
-const IntroRangtalkSection = () => {
+const IntroRangtalkSection = ({
+  introBackColor,
+  introPhoneImg,
+  introTextBgColor,
+  introTextColor,
+  introNoticeImg,
+  introCommuImg,
+  introEmergencyImg,
+}) => {
   return (
     <Box
       id="introSection"
@@ -11,7 +19,7 @@ const IntroRangtalkSection = () => {
       justifyContent="center"
       pt={9}
       pb={25}
-      bgcolor="rgba(243, 245, 248, 0.1)"
+      bgcolor={introBackColor}
     >
       <Container maxWidth="lg">
         <Box
@@ -22,10 +30,7 @@ const IntroRangtalkSection = () => {
           height="auto"
         >
           <Box>
-            <CardMedia
-              component="img"
-              image="img/img_mockup_teacher/img_mockup_teacher.jpg"
-            />
+            <CardMedia component="img" image={introPhoneImg} />
           </Box>
           <Box width="440px" maxWidth="100%" mr="-40px">
             <Typography
@@ -36,7 +41,7 @@ const IntroRangtalkSection = () => {
               component="div"
               mb={1}
               color="Black"
-              bgcolor="rgba(113, 193, 217, 0.2);"
+              bgcolor={introTextBgColor}
               fontFamily="Noto Sans KR"
               width="175px"
             >
@@ -47,7 +52,7 @@ const IntroRangtalkSection = () => {
               gutterBottom
               component="div"
               mb={6}
-              color="#71a5d9"
+              color={introTextColor}
               fontWeight="bold"
               fontFamily="Noto Sans KR"
             >
@@ -88,7 +93,7 @@ const IntroRangtalkSection = () => {
           >
             <CardMedia
               component="img"
-              image="img/img_sub_04.svg"
+              image={introNoticeImg}
               sx={{ width: "120px", height: "120px", marginRight: "12px" }}
             />
             <Box>
@@ -157,7 +162,7 @@ const IntroRangtalkSection = () => {
           >
             <CardMedia
               component="img"
-              image="img/img_sub_05.svg"
+              image={introCommuImg}
               sx={{ width: "120px", height: "120px", marginRight: "12px" }}
             />
             <Box>
@@ -225,7 +230,7 @@ const IntroRangtalkSection = () => {
           >
             <CardMedia
               component="img"
-              image="img/img_sub_06.svg"
+              image={introEmergencyImg}
               sx={{ width: "120px", height: "120px", marginRight: "12px" }}
             />
             <Box>
