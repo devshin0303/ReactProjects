@@ -2,7 +2,17 @@ import { Button, styled } from "@mui/material";
 import "../../../styles/font.css";
 import { Link as RouterLink } from "react-router-dom";
 import { Link } from "@mui/material";
-import { Constants } from "../../constants/Constants";
+import { CONSTANTS } from "../../../constants/Constants";
+import { RANG } from "../../../constants/rang";
+import { SSAM } from "../../../constants/ssam";
+import { Box, breakpoints } from "@mui/system";
+
+const Root = styled(Box)(({ theme }) => ({
+  padding: theme.spacing(1),
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "10px",
+  },
+}));
 
 const SubBtn = styled(Button)((props) => ({
   "&:hover": {
@@ -18,6 +28,7 @@ const SubBtn = styled(Button)((props) => ({
   variant: "contained",
   color: props.txtcolor,
   padding: "6px 16px",
+
   // [Theme.breakpoints.down("sm")]: {
   //   color: "red",
   // },
@@ -45,37 +56,37 @@ const SubButton = ({ text, txtColor, btnColor }) => {
   //   </>
   // );
 
-  if (text === Constants.ssam) {
+  if (text === SSAM.talkName) {
     return (
-      <>
+      <Root>
         <SubBtn txtcolor="#a87cff" btnbgcolor="inherit">
-          아이랑톡
+          {CONSTANTS.child}
         </SubBtn>
         <SubBtn txtcolor={txtColor} btnbgcolor={btnColor}>
           {text}
         </SubBtn>
         <Link component={RouterLink} to="/rangtalk" underline="none">
           <SubBtn txtcolor="rgb(95, 198, 190)" btnbgcolor="inherit">
-            학교랑톡
+            {RANG.talkName}
           </SubBtn>
         </Link>
-      </>
+      </Root>
     );
-  } else if (text === Constants.school) {
+  } else if (text === RANG.talkName) {
     return (
-      <>
+      <Root>
         <SubBtn txtcolor="#a87cff" btnbgcolor="inherit">
-          아이랑톡
+          {CONSTANTS.child}
         </SubBtn>
         <Link to="/ssamtalk" underline="none" component={RouterLink}>
           <SubBtn txtcolor="rgb(113, 165, 217)" btnbgcolor="inherit">
-            쌤이랑톡
+            {SSAM.talkName}
           </SubBtn>
         </Link>
         <SubBtn txtcolor={txtColor} btnbgcolor={btnColor}>
           {text}
         </SubBtn>
-      </>
+      </Root>
     );
   }
 };

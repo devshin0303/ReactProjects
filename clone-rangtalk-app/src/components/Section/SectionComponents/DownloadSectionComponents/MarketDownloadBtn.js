@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
 import { Button, CardMedia } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { Constants } from "../../../constants/Constants";
+import { CONSTANTS } from "../../../../constants/Constants";
+import { RANG } from "../../../../constants/rang";
+import { SSAM } from "../../../../constants/ssam";
 
 const DownloadBtnStyle = styled(Button)({
   "&:hover": {
@@ -41,16 +43,13 @@ const MarketDownloadBtn = ({ appMarket, downText }) => {
   // }, [downloadObj]);
 
   const onClick = () => {
-    if (appMarket === Constants.googlePlay && downText === Constants.ssam)
+    if (appMarket === CONSTANTS.googlePlay && downText === SSAM.talkName)
       window.open(ssamAndroidLink, "_blank");
-    else if (appMarket === Constants.appStore && downText === Constants.ssam)
+    else if (appMarket === CONSTANTS.appStore && downText === SSAM.talkName)
       window.open(ssamIosLink, "_blank");
-    else if (
-      appMarket === Constants.googlePlay &&
-      downText === Constants.school
-    )
+    else if (appMarket === CONSTANTS.googlePlay && downText === RANG.talkName)
       window.open(schoolAndroidLink, "_blank");
-    else if (appMarket === Constants.appStore && downText === Constants.school)
+    else if (appMarket === CONSTANTS.appStore && downText === RANG.talkName)
       window.open(schoolIosLink, "_blank");
     // if (appMarket === "google") window.open("", "_blank");
     // else if (appMarket === "IOS") window.open("", "_balnk");
@@ -63,7 +62,7 @@ const MarketDownloadBtn = ({ appMarket, downText }) => {
         image={appMarket}
         alt="logoImg"
         sx={{ width: "auto" }}
-      ></CardMedia>
+      />
     </DownloadBtnStyle>
   );
 };

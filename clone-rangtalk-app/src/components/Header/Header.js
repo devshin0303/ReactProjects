@@ -17,7 +17,11 @@ const Header = ({ mainLogoImg, loginBtnColor, txtColor, btnColor, text }) => {
   return (
     <>
       <MyAppBar elevation={0}>
-        <MainGnb mainLogoImg={mainLogoImg} loginBtnColor={loginBtnColor} />
+        <MainGnb
+          id="mainTop"
+          mainLogoImg={mainLogoImg}
+          loginBtnColor={loginBtnColor}
+        />
         <SubGnb txtColor={txtColor} btnColor={btnColor} text={text} />
       </MyAppBar>
     </>

@@ -5,6 +5,7 @@ import IntroRangtalkSection from "./SectionComponents/IntroRangtalkSection";
 import FaqSection from "./SectionComponents/FaqSection";
 import DownloadSection from "./SectionComponents/DownloadSection";
 import ContactSection from "./SectionComponents/ContactSection";
+import { Box } from "@mui/material";
 
 const Section = ({
   backMainImg,
@@ -17,13 +18,16 @@ const Section = ({
   introEmergencyImg,
   downTopBtnName,
   downBackImg,
-  downManuColor,
+  downManualColor,
   downTalkImg,
   downTxtColor,
   downText,
+  plusImg,
+  mainColor,
+  introTalkName,
 }) => {
   return (
-    <>
+    <Box id="mainTop">
       <MainTopSection backMainImg={backMainImg} />
       <YoutubePlayerSection />
       <IntroRangtalkSection
@@ -34,18 +38,19 @@ const Section = ({
         introNoticeImg={introNoticeImg}
         introCommuImg={introCommuImg}
         introEmergencyImg={introEmergencyImg}
+        introTalkName={introTalkName}
       />
-      <FaqSection />
+      <FaqSection plusImg={plusImg} mainColor={mainColor} />
       <DownloadSection
         downTopBtnName={downTopBtnName}
         downBackImg={downBackImg}
-        downManuColor={downManuColor}
+        downManualColor={downManualColor}
         downTalkImg={downTalkImg}
         downTxtColor={downTxtColor}
         downText={downText}
       />
       <ContactSection />
-    </>
+    </Box>
   );
 };
 

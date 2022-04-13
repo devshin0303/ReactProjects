@@ -2,34 +2,36 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Section from "../components/Section/Section";
 import PropTypes from "prop-types";
-import { Constants } from "../components/constants/Constants";
-import { RANG } from "../components/constants/rang";
+import { RANG } from "../constants/rang";
 
 function Rangtalk() {
   return (
     <>
       <Header
         mainLogoImg={RANG.mainLogo}
-        loginBtnColor={Constants.schoolMainColor}
-        txtColor={Constants.white}
-        btnColor={Constants.schoolMainColor}
-        text={Constants.school}
+        loginBtnColor={RANG.mainColor}
+        txtColor="#FFF"
+        btnColor={RANG.mainColor}
+        text={RANG.talkName}
       />
       <Section
-        backMainImg={Constants.section.schoolBackMainImg}
-        introBackColor={Constants.section.schoolIntroBgColor}
-        introPhoneImg={Constants.section.schoolPhoneImg}
-        introTextBgColor={Constants.section.schoolIntroTextBgC}
-        introTextColor={Constants.schoolMainColor}
-        introNoticeImg={Constants.section.schoolIntroNoticeImg}
-        introCommuImg={Constants.section.schoolIntroCommuImg}
-        introEmergencyImg={Constants.section.schoolIntroEmerImg}
-        downTopBtnName={Constants.school}
-        downBackImg={Constants.section.schoolBottomPhone}
-        downTxtColor={Constants.schoolMainColor}
-        downTalkImg={Constants.section.schoolBottomTalkImg}
-        downManuColor={Constants.schoolMainColor}
-        downText={Constants.school}
+        backMainImg="img/img_rangtalk_main/img_main@2x.png"
+        introBackColor="rgba(134, 185, 180, 0.1)"
+        introPhoneImg="img/img_mockup_school/img_mockup_school.png"
+        introTextBgColor="#d8efed"
+        introTextColor={RANG.mainColor}
+        introNoticeImg="img/img_sub_01.svg"
+        introCommuImg="img/img_sub_02.svg"
+        introEmergencyImg="img/img_sub_03.svg"
+        introTalkName={RANG.talkName}
+        downTopBtnName={RANG.talkName}
+        downBackImg="img/img_bottom_phone_school/img_bottom_phone@2x.png"
+        downTxtColor={RANG.mainColor}
+        downTalkImg="img/img_bottom_logo_school/img_bottom_logo@2x.png"
+        downManualColor={RANG.mainColor}
+        downText={RANG.talkName}
+        plusImg="img/ic_faq_list_n_rang/ic_faq_list_n.png"
+        mainColor={RANG.mainColor}
       />
       <Footer />
     </>
@@ -42,6 +44,24 @@ Header.propTypes = {
   txtColor: PropTypes.string.isRequired,
   btnColor: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+};
+
+Section.propTypes = {
+  backMainImg: PropTypes.string.isRequired,
+  introBackColor: PropTypes.string.isRequired,
+  introPhoneImg: PropTypes.string.isRequired,
+  introTextBgColor: PropTypes.string.isRequired,
+  introTextColor: PropTypes.string.isRequired,
+  introNoticeImg: PropTypes.string.isRequired,
+  introCommuImg: PropTypes.string.isRequired,
+  introTalkName: PropTypes.string.isRequired,
+  introEmergencyImg: PropTypes.string.isRequired,
+  downTopBtnName: PropTypes.string.isRequired,
+  downBackImg: PropTypes.string.isRequired,
+  downTxtColor: PropTypes.string.isRequired,
+  downTalkImg: PropTypes.string.isRequired,
+  downManualColor: PropTypes.string.isRequired,
+  downText: PropTypes.string.isRequired,
 };
 
 export default Rangtalk;

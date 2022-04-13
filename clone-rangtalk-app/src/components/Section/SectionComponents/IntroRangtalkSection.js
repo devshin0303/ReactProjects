@@ -10,6 +10,7 @@ const IntroRangtalkSection = ({
   introNoticeImg,
   introCommuImg,
   introEmergencyImg,
+  introTalkName,
 }) => {
   return (
     <Box
@@ -56,7 +57,7 @@ const IntroRangtalkSection = ({
               fontWeight="bold"
               fontFamily="Noto Sans KR"
             >
-              쌤이랑톡
+              {introTalkName}
             </Typography>
             <Typography
               variant="body1"

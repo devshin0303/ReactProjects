@@ -1,18 +1,20 @@
-import { Button, CardMedia, Container, Typography } from "@mui/material";
-import { Box } from "@mui/system";
-import React from "react";
+import { CardMedia, Container, Typography } from "@mui/material";
+import { Box, color } from "@mui/system";
+import React, { useState } from "react";
 import "../../../styles/font.css";
 import PropTypes from "prop-types";
 import DownloadSectionTopBtn from "./DownloadSectionComponents/DownloadSectionTopBtn";
 import MarketDownloadBtn from "./DownloadSectionComponents/MarketDownloadBtn";
-import { Constants } from "../../constants/Constants";
+import { CONSTANTS } from "../../../constants/Constants";
+import { ManualBtn } from "./DownloadSectionComponents/ManualBtn";
+import { RANG } from "../../../constants/rang";
 
 const DownloadSection = ({
   downBackImg,
   downTopBtnName,
   downTxtColor,
   downTalkImg,
-  downManuColor,
+  downManualColor,
   downText,
   downdef,
 }) => {
@@ -67,6 +69,7 @@ const DownloadSection = ({
             </Typography>
             <Box>
               <CardMedia
+                className="balloon-1"
                 component="img"
                 height="51px"
                 width="50px"
@@ -90,35 +93,21 @@ const DownloadSection = ({
             쌤이랑톡입니다.
           </Typography>
           <Box mt="32px">
-            <Button
-              variant="contained"
-              component="span"
-              sx={{
-                "&:hover": {
-                  backgroundColor: "rgba(113, 165, 217, 0.7)",
-                },
-                textAlign: "center",
-                width: "100%",
-                bgcolor: downManuColor,
-                fontWeight: "bold",
-                fontFamily: "Noto Sans KR",
-                fontSize: "18px",
-                marginBottom: 2,
-              }}
-            >
-              쌤이랑톡매뉴얼
-            </Button>
+            <ManualBtn
+              downManualColor={downManualColor}
+              downTopBtnName={downTopBtnName}
+            />
             <Box
               display="flex"
               justifyContent="space-between"
               alignItems="center"
             >
               <MarketDownloadBtn
-                appMarket={Constants.googlePlay}
+                appMarket={CONSTANTS.googlePlay}
                 downText={downText}
               ></MarketDownloadBtn>
               <MarketDownloadBtn
-                appMarket={Constants.appStore}
+                appMarket={CONSTANTS.appStore}
                 downText={downText}
               ></MarketDownloadBtn>
             </Box>

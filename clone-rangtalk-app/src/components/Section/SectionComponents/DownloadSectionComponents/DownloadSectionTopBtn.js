@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
 import MainButton from "../../../Header/HeaderComponents/MainButton";
 import "../../../../styles/font.css";
-import { Constants } from "../../../constants/Constants";
+import { CONSTANTS } from "../../../../constants/Constants";
+import { SSAM } from "../../../../constants/ssam";
+import { RANG } from "../../../../constants/rang";
 
 const Btn = styled(MainButton)((props) => ({
   borderRadius: 0,
@@ -15,30 +17,35 @@ const Btn = styled(MainButton)((props) => ({
   borderBottom: props.bordercolor,
 }));
 
-const DownloadSectionTopBtn = ({ downTopBtnName }) => {
-  const onClick = () => {
-    console.log("clicked!!");
-  };
-  if (downTopBtnName === Constants.ssam) {
+const DownloadSectionTopBtn = ({ downTopBtnName, downPageConverter }) => {
+  if (downTopBtnName === SSAM.talkName) {
     return (
       <>
-        <Btn txtcolor="#a9b6c7">{Constants.child}</Btn>
-        <Btn onClick={onClick} bordercolor="2px solid #404040" txtcolor="black">
+        <Btn txtcolor="#a9b6c7">{CONSTANTS.child}</Btn>
+        <Btn
+          onClick={downPageConverter}
+          bordercolor="2px solid #404040"
+          txtcolor="black"
+        >
           {downTopBtnName}
         </Btn>
-        <Btn txtcolor="#a9b6c7" onClick={onClick}>
-          {Constants.school}
+        <Btn txtcolor="#a9b6c7" onClick={downPageConverter}>
+          {RANG.talkName}
         </Btn>
       </>
     );
-  } else if (downTopBtnName === Constants.school) {
+  } else if (downTopBtnName === RANG.talkName) {
     return (
       <>
-        <Btn txtcolor="#a9b6c7">{Constants.child}</Btn>
-        <Btn onClick={onClick} txtcolor="#a9b6c7">
-          {Constants.ssam}
+        <Btn txtcolor="#a9b6c7">{CONSTANTS.child}</Btn>
+        <Btn onClick={downPageConverter} txtcolor="#a9b6c7">
+          {SSAM.talkName}
         </Btn>
-        <Btn onClick={onClick} bordercolor="2px solid #404040" txtcolor="black">
+        <Btn
+          onClick={downPageConverter}
+          bordercolor="2px solid #404040"
+          txtcolor="black"
+        >
           {downTopBtnName}
         </Btn>
       </>
