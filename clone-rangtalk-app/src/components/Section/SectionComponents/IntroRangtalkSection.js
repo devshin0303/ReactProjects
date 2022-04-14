@@ -1,4 +1,11 @@
-import { Box, CardMedia, Container, Typography } from "@mui/material";
+import {
+  Box,
+  CardMedia,
+  Container,
+  Hidden,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import React from "react";
 import "../../../styles/font.css";
 
@@ -12,14 +19,15 @@ const IntroRangtalkSection = ({
   introEmergencyImg,
   introTalkName,
 }) => {
+  const matches = useMediaQuery("(min-width:600px)");
+
   return (
     <Box
       id="introSection"
       display="flex"
       alignItems="center"
       justifyContent="center"
-      pt={9}
-      pb={25}
+      sx={matches ? { pt: 9, pb: 25 } : { pt: 7, pb: 3 }}
       bgcolor={introBackColor}
     >
       <Container maxWidth="lg">
@@ -30,9 +38,11 @@ const IntroRangtalkSection = ({
           width="100%"
           height="auto"
         >
-          <Box>
-            <CardMedia component="img" image={introPhoneImg} />
-          </Box>
+          <Hidden smDown>
+            <Box>
+              <CardMedia component="img" image={introPhoneImg} />
+            </Box>
+          </Hidden>
           <Box width="440px" maxWidth="100%" mr="-40px">
             <Typography
               variant="h5"
@@ -81,21 +91,37 @@ const IntroRangtalkSection = ({
           </Box>
         </Box>
         <Box
-          display="flex"
-          alignItems="center"
-          justifyContent="space-between"
           width="100%"
           height="auto"
+          sx={
+            matches
+              ? {
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }
+              : {
+                  display: "flex",
+                  flexDirection: "column",
+                  // justifyContent: "space-",
+                  alignItems: "flex-start",
+                }
+          }
         >
           <Box
-            display="inline-flex"
+            display="flex"
             alignItems="center"
             justifyContent="center"
+            sx={matches ? { padding: 0 } : { padding: "30px 8px" }}
           >
             <CardMedia
               component="img"
               image={introNoticeImg}
-              sx={{ width: "120px", height: "120px", marginRight: "12px" }}
+              sx={
+                matches
+                  ? { width: "120px", height: "120px", marginRight: "12px" }
+                  : { width: "100px", height: "100px", marginRight: "12px" }
+              }
             />
             <Box>
               <Typography
@@ -130,41 +156,48 @@ const IntroRangtalkSection = ({
               </Typography>
             </Box>
           </Box>
-          <Box display="flex">
-            <Box padding="4px">
-              <Box
-                bgcolor="rgb(95,198,190)"
-                width="6px"
-                height="6px"
-                borderRadius="50%"
-              />
+          <Hidden smDown>
+            <Box display="flex">
+              <Box padding="4px">
+                <Box
+                  bgcolor="rgb(95,198,190)"
+                  width="6px"
+                  height="6px"
+                  borderRadius="50%"
+                />
+              </Box>
+              <Box padding="4px">
+                <Box
+                  bgcolor="rgb(95,198,190)"
+                  width="6px"
+                  height="6px"
+                  borderRadius="50%"
+                />
+              </Box>
+              <Box padding="4px">
+                <Box
+                  bgcolor="rgb(95,198,190)"
+                  width="6px"
+                  height="6px"
+                  borderRadius="50%"
+                />
+              </Box>
             </Box>
-            <Box padding="4px">
-              <Box
-                bgcolor="rgb(95,198,190)"
-                width="6px"
-                height="6px"
-                borderRadius="50%"
-              />
-            </Box>
-            <Box padding="4px">
-              <Box
-                bgcolor="rgb(95,198,190)"
-                width="6px"
-                height="6px"
-                borderRadius="50%"
-              />
-            </Box>
-          </Box>
+          </Hidden>
           <Box
             display="inline-flex"
             alignItems="center"
             justifyContent="center"
+            sx={matches ? { padding: 0 } : { padding: "30px 8px" }}
           >
             <CardMedia
               component="img"
               image={introCommuImg}
-              sx={{ width: "120px", height: "120px", marginRight: "12px" }}
+              sx={
+                matches
+                  ? { width: "120px", height: "120px", marginRight: "12px" }
+                  : { width: "100px", height: "100px", marginRight: "12px" }
+              }
             />
             <Box>
               <Typography
@@ -198,41 +231,48 @@ const IntroRangtalkSection = ({
               </Typography>
             </Box>
           </Box>
-          <Box display="flex">
-            <Box padding="4px">
-              <Box
-                bgcolor="rgb(95,198,190)"
-                width="6px"
-                height="6px"
-                borderRadius="50%"
-              />
+          <Hidden smDown>
+            <Box display="flex">
+              <Box padding="4px">
+                <Box
+                  bgcolor="rgb(95,198,190)"
+                  width="6px"
+                  height="6px"
+                  borderRadius="50%"
+                />
+              </Box>
+              <Box padding="4px">
+                <Box
+                  bgcolor="rgb(95,198,190)"
+                  width="6px"
+                  height="6px"
+                  borderRadius="50%"
+                />
+              </Box>
+              <Box padding="4px">
+                <Box
+                  bgcolor="rgb(95,198,190)"
+                  width="6px"
+                  height="6px"
+                  borderRadius="50%"
+                />
+              </Box>
             </Box>
-            <Box padding="4px">
-              <Box
-                bgcolor="rgb(95,198,190)"
-                width="6px"
-                height="6px"
-                borderRadius="50%"
-              />
-            </Box>
-            <Box padding="4px">
-              <Box
-                bgcolor="rgb(95,198,190)"
-                width="6px"
-                height="6px"
-                borderRadius="50%"
-              />
-            </Box>
-          </Box>
+          </Hidden>
           <Box
             display="inline-flex"
             alignItems="center"
             justifyContent="center"
+            sx={matches ? { padding: 0 } : { padding: "30px 8px" }}
           >
             <CardMedia
               component="img"
               image={introEmergencyImg}
-              sx={{ width: "120px", height: "120px", marginRight: "12px" }}
+              sx={
+                matches
+                  ? { width: "120px", height: "120px", marginRight: "12px" }
+                  : { width: "100px", height: "100px", marginRight: "12px" }
+              }
             />
             <Box>
               <Typography

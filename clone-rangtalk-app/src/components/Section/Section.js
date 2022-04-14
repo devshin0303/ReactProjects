@@ -23,12 +23,20 @@ const Section = ({
   downTxtColor,
   downText,
   plusImg,
+  minusImg,
   mainColor,
   introTalkName,
+  backMainMobileImg,
+  talkName,
+  downMobileImg,
 }) => {
   return (
     <Box id="mainTop">
-      <MainTopSection backMainImg={backMainImg} />
+      <MainTopSection
+        backMainImg={backMainImg}
+        backMainMobileImg={backMainMobileImg}
+        talkName={talkName}
+      />
       <YoutubePlayerSection />
       <IntroRangtalkSection
         introBackColor={introBackColor}
@@ -40,7 +48,7 @@ const Section = ({
         introEmergencyImg={introEmergencyImg}
         introTalkName={introTalkName}
       />
-      <FaqSection plusImg={plusImg} mainColor={mainColor} />
+      <FaqSection plusImg={plusImg} minusImg={minusImg} mainColor={mainColor} />
       <DownloadSection
         downTopBtnName={downTopBtnName}
         downBackImg={downBackImg}
@@ -48,6 +56,7 @@ const Section = ({
         downTalkImg={downTalkImg}
         downTxtColor={downTxtColor}
         downText={downText}
+        downMobileImg={downMobileImg}
       />
       <ContactSection />
     </Box>

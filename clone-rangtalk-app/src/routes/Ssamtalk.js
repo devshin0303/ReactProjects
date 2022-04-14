@@ -16,6 +16,8 @@ function Ssamtalk() {
       />
       <Section
         backMainImg="img/img_ssamtalk_main/img_main@2x.jpg"
+        backMainMobileImg="img/img_mobile_bg_sec1/bg@2x.png"
+        talkName={SSAM.talkName}
         introBackColor="#fff"
         introPhoneImg="img/img_mockup_teacher/img_mockup_teacher.jpg"
         introTextBgColor="rgba(113, 193, 217, 0.2)"
@@ -30,7 +32,9 @@ function Ssamtalk() {
         downTalkImg="img/img_bottom_logo/img_bottom_logo_2@2x.png"
         downManualColor={SSAM.mainColor}
         downText={SSAM.talkName}
+        downMobileImg="img/img_bottom_mobile/img_bottom_mockup.png"
         plusImg="img/ic_faq_list_n/ic_faq_list_n.png"
+        minusImg="img/ic_faq_list_s/ic_faq_list_s.png"
         mainColor={SSAM.mainColor}
       />
       <Footer />
@@ -62,6 +66,9 @@ Section.propTypes = {
   downTalkImg: PropTypes.string.isRequired,
   downManualColor: PropTypes.string.isRequired,
   downText: PropTypes.string.isRequired,
+  plusImg: PropTypes.string.isRequired,
+  minusImg: PropTypes.string.isRequired,
+  mainColor: PropTypes.string.isRequired,
 };
 
 export default Ssamtalk;

@@ -1,18 +1,10 @@
-import { Button, styled } from "@mui/material";
+import { Button, styled, useMediaQuery } from "@mui/material";
 import "../../../styles/font.css";
 import { Link as RouterLink } from "react-router-dom";
 import { Link } from "@mui/material";
 import { CONSTANTS } from "../../../constants/Constants";
 import { RANG } from "../../../constants/rang";
 import { SSAM } from "../../../constants/ssam";
-import { Box, breakpoints } from "@mui/system";
-
-const Root = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(1),
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "10px",
-  },
-}));
 
 const SubBtn = styled(Button)((props) => ({
   "&:hover": {
@@ -24,7 +16,6 @@ const SubBtn = styled(Button)((props) => ({
   backgroundColor: props.btnbgcolor,
   fontWeight: "bold",
   fontFamily: "Noto Sans KR",
-  fontSize: "16px",
   variant: "contained",
   color: props.txtcolor,
   padding: "6px 16px",
@@ -35,6 +26,66 @@ const SubBtn = styled(Button)((props) => ({
 }));
 
 const SubButton = ({ text, txtColor, btnColor }) => {
+  const matches = useMediaQuery("(min-width:600px)");
+
+  if (text === SSAM.talkName) {
+    return (
+      <>
+        <SubBtn
+          txtcolor="#a87cff"
+          btnbgcolor="inherit"
+          sx={matches ? { fontSize: "16px" } : { fontSize: "13px" }}
+        >
+          {CONSTANTS.child}
+        </SubBtn>
+        <SubBtn
+          txtcolor={txtColor}
+          btnbgcolor={btnColor}
+          sx={matches ? { fontSize: "16px" } : { fontSize: "13px" }}
+        >
+          {text}
+        </SubBtn>
+        <Link component={RouterLink} to="/rangtalk" underline="none">
+          <SubBtn
+            txtcolor="rgb(95, 198, 190)"
+            btnbgcolor="inherit"
+            sx={matches ? { fontSize: "16px" } : { fontSize: "13px" }}
+          >
+            {RANG.talkName}
+          </SubBtn>
+        </Link>
+      </>
+    );
+  } else if (text === RANG.talkName) {
+    return (
+      <>
+        <SubBtn
+          txtcolor="#a87cff"
+          btnbgcolor="inherit"
+          sx={matches ? { fontSize: "16px" } : { fontSize: "13px" }}
+        >
+          {CONSTANTS.child}
+        </SubBtn>
+        <Link to="/ssamtalk" underline="none" component={RouterLink}>
+          <SubBtn
+            txtcolor="rgb(113, 165, 217)"
+            btnbgcolor="inherit"
+            sx={matches ? { fontSize: "16px" } : { fontSize: "13px" }}
+          >
+            {SSAM.talkName}
+          </SubBtn>
+        </Link>
+        <SubBtn
+          txtcolor={txtColor}
+          btnbgcolor={btnColor}
+          sx={matches ? { fontSize: "16px" } : { fontSize: "13px" }}
+        >
+          {text}
+        </SubBtn>
+      </>
+    );
+  }
+
   // const location = window.location.pathname;
 
   // console.log(txtColor);
@@ -55,40 +106,6 @@ const SubButton = ({ text, txtColor, btnColor }) => {
   //     </Link>
   //   </>
   // );
-
-  if (text === SSAM.talkName) {
-    return (
-      <Root>
-        <SubBtn txtcolor="#a87cff" btnbgcolor="inherit">
-          {CONSTANTS.child}
-        </SubBtn>
-        <SubBtn txtcolor={txtColor} btnbgcolor={btnColor}>
-          {text}
-        </SubBtn>
-        <Link component={RouterLink} to="/rangtalk" underline="none">
-          <SubBtn txtcolor="rgb(95, 198, 190)" btnbgcolor="inherit">
-            {RANG.talkName}
-          </SubBtn>
-        </Link>
-      </Root>
-    );
-  } else if (text === RANG.talkName) {
-    return (
-      <Root>
-        <SubBtn txtcolor="#a87cff" btnbgcolor="inherit">
-          {CONSTANTS.child}
-        </SubBtn>
-        <Link to="/ssamtalk" underline="none" component={RouterLink}>
-          <SubBtn txtcolor="rgb(113, 165, 217)" btnbgcolor="inherit">
-            {SSAM.talkName}
-          </SubBtn>
-        </Link>
-        <SubBtn txtcolor={txtColor} btnbgcolor={btnColor}>
-          {text}
-        </SubBtn>
-      </Root>
-    );
-  }
 };
 
 export default SubButton;

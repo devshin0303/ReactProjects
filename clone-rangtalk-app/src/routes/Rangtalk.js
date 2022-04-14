@@ -16,6 +16,8 @@ function Rangtalk() {
       />
       <Section
         backMainImg="img/img_rangtalk_main/img_main@2x.png"
+        backMainMobileImg="img/img_mobile_bg_rang/img-m.png"
+        talkName={RANG.talkName}
         introBackColor="rgba(134, 185, 180, 0.1)"
         introPhoneImg="img/img_mockup_school/img_mockup_school.png"
         introTextBgColor="#d8efed"
@@ -30,7 +32,9 @@ function Rangtalk() {
         downTalkImg="img/img_bottom_logo_school/img_bottom_logo@2x.png"
         downManualColor={RANG.mainColor}
         downText={RANG.talkName}
+        downMobileImg="img/img_bottom_mobileR/img_bottom_mockup.png"
         plusImg="img/ic_faq_list_n_rang/ic_faq_list_n.png"
+        minusImg="img/ic_faq_list_s_rang/ic_faq_list_s.png"
         mainColor={RANG.mainColor}
       />
       <Footer />
@@ -62,6 +66,9 @@ Section.propTypes = {
   downTalkImg: PropTypes.string.isRequired,
   downManualColor: PropTypes.string.isRequired,
   downText: PropTypes.string.isRequired,
+  plusImg: PropTypes.string.isRequired,
+  minusImg: PropTypes.string.isRequired,
+  mainColor: PropTypes.string.isRequired,
 };
 
 export default Rangtalk;

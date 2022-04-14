@@ -1,23 +1,44 @@
-import { Button, Container, Typography } from "@mui/material";
+import { Button, Container, Typography, useMediaQuery } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import "../../../styles/font.css";
 import { Link } from "react-scroll";
 
-const MainTopSection = ({ backMainImg }) => {
+const MainTopSection = ({ backMainImg, backMainMobileImg, talkName }) => {
+  const matches = useMediaQuery("(min-width:600px)");
+
   return (
     <Box
-      sx={{
-        backgroundImage: `url(${backMainImg})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        height: 1000,
-      }}
+      sx={
+        matches
+          ? {
+              backgroundImage: `url(${backMainImg})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "top",
+              height: 1000,
+            }
+          : {
+              backgroundImage: `url(${backMainMobileImg})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "top",
+              height: "100vh",
+            }
+      }
     >
       <Container
         maxWidth="lg"
-        sx={{ display: "flex", justifyContent: "flex-start" }}
+        sx={
+          matches
+            ? { display: "flex", justifyContent: "flex-start", width: "100%" }
+            : {
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "flex-end",
+                width: "100%",
+              }
+        }
       >
         <Box pt={22} width="600px" height="auto">
           <Typography
@@ -27,7 +48,15 @@ const MainTopSection = ({ backMainImg }) => {
             m={0}
             color="white"
             fontFamily="Noto Sans KR"
-            fontSize="40px"
+            sx={
+              matches
+                ? { fontSize: "40PX" }
+                : {
+                    fontSize: "20px",
+                    fontWweight: 400,
+                    lineHeight: 1.167,
+                  }
+            }
           >
             쌤이<b>랑</b>, 학부모<b>랑</b>, 아이<b>랑</b>,
           </Typography>
@@ -39,7 +68,15 @@ const MainTopSection = ({ backMainImg }) => {
             color="white"
             mt={1}
             mb={1}
-            sx={{ fontSize: "90px", fontWeight: "bold" }}
+            sx={
+              matches
+                ? { fontSize: "90px", fontWeight: "bold" }
+                : {
+                    fontSize: "60px",
+                    fontWeight: "bold",
+                    lineHeight: 1.167,
+                  }
+            }
             fontFamily="NanumSquareRound"
           >
             랑톡
@@ -54,7 +91,15 @@ const MainTopSection = ({ backMainImg }) => {
             fontFamily="Noto Sans KR"
             noWrap={true}
             fontSize="20px"
-            sx={{ color: "#3e3e3e" }}
+            sx={
+              matches
+                ? { fontSize: "20px" }
+                : {
+                    fontSize: "14px",
+                    lineHeight: 1.167,
+                    color: "#fff",
+                  }
+            }
           >
             <strong>
               랑톡(Rangtalk)은 학교 유선 전화를 개인 스마트폰에서 사용할 수 있는
@@ -68,20 +113,38 @@ const MainTopSection = ({ backMainImg }) => {
           <Link to="downloadSection" spy={true} smooth={true}>
             <Button
               variant="contained"
-              sx={{
-                "&:hover": {
-                  boxShadow: "0 3px 2px 2px rgb(0 0 0 / 20%)",
-                  backgroundColor: "#fff",
-                },
-                width: "180px",
-                height: "60px",
-                bgcolor: "#fff",
-                color: "black",
-                fontWeight: "bold",
-                mt: "50px",
-                fontFamily: "Noto Sans KR",
-                fontSize: "18px",
-              }}
+              sx={
+                matches
+                  ? {
+                      "&:hover": {
+                        boxShadow: "0 3px 2px 2px rgb(0 0 0 / 20%)",
+                        backgroundColor: "#fff",
+                      },
+                      width: "180px",
+                      height: "60px",
+                      bgcolor: "#fff",
+                      color: "black",
+                      fontWeight: "bold",
+                      mt: "50px",
+                      fontFamily: "Noto Sans KR",
+                      fontSize: "18px",
+                    }
+                  : {
+                      "&:hover": {
+                        boxShadow: "0 3px 2px 2px rgb(0 0 0 / 20%)",
+                        backgroundColor: "#fff",
+                      },
+                      width: "100px",
+                      height: "48px",
+                      bgcolor: "#fff",
+                      color: "black",
+                      fontWeight: "bold",
+                      mt: "50px",
+                      mb: "20vh",
+                      fontFamily: "Noto Sans KR",
+                      fontSize: "16px",
+                    }
+              }
             >
               다운로드
             </Button>

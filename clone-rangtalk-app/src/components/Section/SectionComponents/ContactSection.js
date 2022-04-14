@@ -1,9 +1,11 @@
-import { Container, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Container, TextField, Typography, useMediaQuery } from "@mui/material";
+import { Box, fontSize } from "@mui/system";
 import React from "react";
 import "../../../styles/font.css";
 
 const ContactSection = () => {
+  const matches = useMediaQuery("(min-width:600px)");
+
   return (
     <Box
       id="supportSection"
@@ -21,6 +23,7 @@ const ContactSection = () => {
           fontSize="20px"
           fontWeight="500"
           fontFamily="Noto Sans KR"
+          sx={matches ? { fontSize: "20px" } : { fontSize: "16px" }}
         >
           랑톡에 대해
           <Typography
@@ -33,9 +36,25 @@ const ContactSection = () => {
           </Typography>
           이 있으신가요?
         </Typography>
-        <Typography variant="h2" fontWeight="bold" fontFamily="Noto Sans KR">
-          CONTACT US
-        </Typography>
+        <Box display="flex" justifyContent="space-between">
+          <Typography
+            variant="h2"
+            fontWeight="bold"
+            fontFamily="Noto Sans KR"
+            component="div"
+            sx={matches ? { fontSize: "60px" } : { fontSize: "32px" }}
+          >
+            CONTACT US
+          </Typography>
+          <Box>
+            <TextField
+              id="standard-basic"
+              label="성함"
+              varient="standard"
+              size="small"
+            />
+          </Box>
+        </Box>
       </Container>
     </Box>
   );

@@ -5,7 +5,7 @@ import "../../../styles/font.css";
 import { FaqAccordion } from "./FaqSectionComponents/FaqAccordion";
 import PropTypes from "prop-types";
 
-const FaqSection = ({ plusImg, mainColor }) => {
+const FaqSection = ({ plusImg, mainColor, minusImg }) => {
   return (
     <Box
       id="faqSection"
@@ -42,7 +42,11 @@ const FaqSection = ({ plusImg, mainColor }) => {
             height: "680px",
           }}
         >
-          <FaqAccordion plusImg={plusImg} mainColor={mainColor} />
+          <FaqAccordion
+            plusImg={plusImg}
+            minusImg={minusImg}
+            mainColor={mainColor}
+          />
         </Paper>
       </Container>
     </Box>

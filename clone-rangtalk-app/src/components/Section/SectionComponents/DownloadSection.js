@@ -1,4 +1,10 @@
-import { CardMedia, Container, Typography } from "@mui/material";
+import {
+  CardMedia,
+  Container,
+  Hidden,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import { Box, color } from "@mui/system";
 import React, { useState } from "react";
 import "../../../styles/font.css";
@@ -11,6 +17,7 @@ import { RANG } from "../../../constants/rang";
 
 const DownloadSection = ({
   downBackImg,
+  downMobileImg,
   downTopBtnName,
   downTxtColor,
   downTalkImg,
@@ -18,24 +25,36 @@ const DownloadSection = ({
   downText,
   downdef,
 }) => {
+  const matches = useMediaQuery("(min-width:600px)");
+
   return (
     <Box
       id="downloadSection"
-      sx={{
-        backgroundImage: `url(${downBackImg})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        height: 1000,
-        backgroundColor: "#f2f2f2",
-      }}
+      sx={
+        matches
+          ? {
+              backgroundImage: `url(${downBackImg})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              height: 1000,
+              backgroundColor: "#f2f2f2",
+            }
+          : {
+              backgroundImage: "none",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundColor: "#f2f2f2",
+            }
+      }
     >
       <Container
         maxWidth="lg"
         sx={{ display: "flex", justifyContent: "flex-start" }}
       >
         <Box
-          pt={16}
+          sx={matches ? { paddingTop: 16 } : { paddingTop: 2 }}
           width="600px"
           height="auto"
           display="flex"
@@ -46,7 +65,7 @@ const DownloadSection = ({
             display="flex"
             justifyContent="flex-start"
             alignItems="center"
-            mb={15}
+            sx={matches ? { marginBottom: 15 } : { marginBottom: 5 }}
           >
             <DownloadSectionTopBtn
               downTopBtnName={downTopBtnName}
@@ -61,7 +80,8 @@ const DownloadSection = ({
             <Typography
               fontFamily="Noto Sans KR"
               noWrap={true}
-              fontSize="56px"
+              sx={matches ? { fontSize: "56px" } : { fontSize: "30px" }}
+              // fontSize="56px"
               color={downTxtColor}
               fontWeight="bold"
             >
@@ -71,8 +91,11 @@ const DownloadSection = ({
               <CardMedia
                 className="balloon-1"
                 component="img"
-                height="51px"
-                width="50px"
+                sx={
+                  matches
+                    ? { width: "51px", height: "50px" }
+                    : { width: "36px", height: "37px", marginLeft: 2 }
+                }
                 image={downTalkImg}
                 alt="logoImg"
               ></CardMedia>
@@ -86,13 +109,23 @@ const DownloadSection = ({
             m={0}
             fontFamily="Noto Sans KR"
             noWrap={true}
-            fontSize="20px"
+            sx={matches ? { fontSize: "20px" } : { fontSize: "14px" }}
           >
             학교와 선생님을 위한 양방향 소통앱
             <br />
             쌤이랑톡입니다.
           </Typography>
-          <Box mt="32px">
+          <Hidden smUp>
+            <Box>
+              <CardMedia
+                component="img"
+                image={downMobileImg}
+                width="100%"
+                height="auto"
+              />
+            </Box>
+          </Hidden>
+          <Box mt="32px" sx={matches ? {} : { width: "100%" }}>
             <ManualBtn
               downManualColor={downManualColor}
               downTopBtnName={downTopBtnName}

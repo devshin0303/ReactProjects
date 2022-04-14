@@ -4,32 +4,52 @@ import {
   AccordionSummary,
   CardMedia,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import "../../../../styles/font.css";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export const FaqAccordion = ({ plusImg, mainColor }) => {
+export const FaqAccordion = ({ plusImg, mainColor, minusImg }) => {
+  const matches = useMediaQuery("(min-width:600px)");
+
+  const [open, setOpen] = useState(false);
+
+  const onClick = () => {
+    setOpen(!open);
+  };
+
   return (
-    <Accordion>
+    <Accordion
+      onClick={onClick}
+      sx={{ boxShadow: "none", borderBottom: "1px solid rgba(0, 0, 0, 0.12)" }}
+    >
       <AccordionSummary
         expandIcon={
-          <ExpandMoreIcon>
-            <CardMedia
-              component="img"
-              image={plusImg}
-              alt="logoImg"
-              sx={{ width: "auto" }}
-            />
-          </ExpandMoreIcon>
+          // <ExpandMoreIcon>
+          <CardMedia
+            component="img"
+            image={open ? minusImg : plusImg}
+            alt="logoImg"
+            sx={{ width: "auto" }}
+          />
+          // </ExpandMoreIcon>
         }
         aria-controls="panel1a-content"
         id="panel1a-header"
-        sx={{
-          height: "64px",
-          padding: "18px 0",
-          flexDirection: "row-reverse",
-        }}
+        sx={
+          matches
+            ? {
+                height: "64px",
+                padding: "18px 0",
+                flexDirection: "row-reverse",
+              }
+            : {
+                height: "64px",
+                padding: "18px 0",
+                flexDirection: "row",
+              }
+        }
       >
         <Typography
           sx={{ fontFamily: "Noto Sans KR", fontSize: "18px", marginLeft: 3 }}
