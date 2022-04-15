@@ -36,6 +36,8 @@ function Ssamtalk() {
         plusImg="img/ic_faq_list_n/ic_faq_list_n.png"
         minusImg="img/ic_faq_list_s/ic_faq_list_s.png"
         mainColor={SSAM.mainColor}
+        contactImg="img/ic_contact_service/ic_contact_service.png"
+        btnColor={SSAM.mainColor}
       />
       <Footer />
     </>
@@ -66,9 +68,12 @@ Section.propTypes = {
   downTalkImg: PropTypes.string.isRequired,
   downManualColor: PropTypes.string.isRequired,
   downText: PropTypes.string.isRequired,
+  downMobileImg: PropTypes.string.isRequired,
   plusImg: PropTypes.string.isRequired,
   minusImg: PropTypes.string.isRequired,
   mainColor: PropTypes.string.isRequired,
+  contactImg: PropTypes.string.isRequired,
+  btnColor: PropTypes.string.isRequired,
 };
 
 export default Ssamtalk;

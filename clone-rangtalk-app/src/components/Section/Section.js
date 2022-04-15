@@ -29,6 +29,8 @@ const Section = ({
   backMainMobileImg,
   talkName,
   downMobileImg,
+  contactImg,
+  btnColor,
 }) => {
   return (
     <Box id="mainTop">
@@ -58,7 +60,7 @@ const Section = ({
         downText={downText}
         downMobileImg={downMobileImg}
       />
-      <ContactSection />
+      <ContactSection contactImg={contactImg} btnColor={btnColor} />
     </Box>
   );
 };

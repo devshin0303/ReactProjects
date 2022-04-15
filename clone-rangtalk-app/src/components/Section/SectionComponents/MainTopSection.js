@@ -23,7 +23,7 @@ const MainTopSection = ({ backMainImg, backMainMobileImg, talkName }) => {
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "top",
-              height: "100vh",
+              height: "90vh",
             }
       }
     >
@@ -34,13 +34,20 @@ const MainTopSection = ({ backMainImg, backMainMobileImg, talkName }) => {
             ? { display: "flex", justifyContent: "flex-start", width: "100%" }
             : {
                 display: "flex",
-                justifyContent: "flex-start",
-                alignItems: "flex-end",
+                flexDirection: "column",
+                justifyContent: "flex-end",
+                alignItems: "flex-start",
                 width: "100%",
               }
         }
       >
-        <Box pt={22} width="600px" height="auto">
+        <Box
+          sx={
+            matches
+              ? { pt: 22, width: "600px", height: "auto" }
+              : { pt: 40, width: "600px", height: "auto" }
+          }
+        >
           <Typography
             variant="h3"
             gutterBottom

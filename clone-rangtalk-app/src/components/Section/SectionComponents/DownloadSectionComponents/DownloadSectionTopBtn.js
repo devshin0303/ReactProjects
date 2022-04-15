@@ -4,6 +4,8 @@ import "../../../../styles/font.css";
 import { CONSTANTS } from "../../../../constants/Constants";
 import { SSAM } from "../../../../constants/ssam";
 import { RANG } from "../../../../constants/rang";
+import { Link as RouterLink } from "react-router-dom";
+import { Link } from "@mui/material";
 
 const Btn = styled(MainButton)((props) => ({
   borderRadius: 0,
@@ -29,18 +31,20 @@ const DownloadSectionTopBtn = ({ downTopBtnName, downPageConverter }) => {
         >
           {downTopBtnName}
         </Btn>
-        <Btn txtcolor="#a9b6c7" onClick={downPageConverter}>
-          {RANG.talkName}
-        </Btn>
+        <Link component={RouterLink} to="/rangtalk" underline="none">
+          <Btn txtcolor="#a9b6c7">{RANG.talkName}</Btn>
+        </Link>
       </>
     );
   } else if (downTopBtnName === RANG.talkName) {
     return (
       <>
         <Btn txtcolor="#a9b6c7">{CONSTANTS.child}</Btn>
-        <Btn onClick={downPageConverter} txtcolor="#a9b6c7">
-          {SSAM.talkName}
-        </Btn>
+        <Link component={RouterLink} to="/ssamtalk" underline="none">
+          <Btn onClick={downPageConverter} txtcolor="#a9b6c7">
+            {SSAM.talkName}
+          </Btn>
+        </Link>
         <Btn
           onClick={downPageConverter}
           bordercolor="2px solid #404040"
