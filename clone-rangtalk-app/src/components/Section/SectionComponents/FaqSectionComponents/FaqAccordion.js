@@ -11,7 +11,14 @@ import "../../../../styles/font.css";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box } from "@mui/system";
 
-export const FaqAccordion = ({ plusImg, mainColor, minusImg }) => {
+export const FaqAccordion = ({
+  plusImg,
+  mainColor,
+  minusImg,
+  sum,
+  num,
+  details,
+}) => {
   const matches = useMediaQuery("(min-width:600px)");
 
   const [open, setOpen] = useState(false);
@@ -24,13 +31,13 @@ export const FaqAccordion = ({ plusImg, mainColor, minusImg }) => {
     <>
       <Box>
         <Accordion
-          onClick={onClick}
           sx={{
             boxShadow: "none",
             borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
           }}
         >
           <AccordionSummary
+            onClick={onClick}
             expandIcon={
               // <ExpandMoreIcon>
               <CardMedia
@@ -90,44 +97,27 @@ export const FaqAccordion = ({ plusImg, mainColor, minusImg }) => {
                       }
                 }
               >
-                01.
+                {num}
               </Typography>
-              통화 요금이 궁금합니다.
+              &nbsp;{sum}
             </Typography>
           </AccordionSummary>
-          <AccordionDetails
-            expandIcon={<ExpandMoreIcon sx={{ marginRight: 4 }} />}
-          >
+          <AccordionDetails>
             <Typography
               component="pre"
               variant="body1"
-              padding="20px 0"
+              padding="15px 0"
               fontFamily="Noto Sans KR"
               color="#4a4a4a"
               fontSize="14px"
-              sx={{ padding: "18px" }}
+              sx={{ padding: "18px", whiteSpace: "pre-wrap" }}
             >
-              학교랑톡 통화 요금은 아래와 같습니다. (VAT 포함)
-              <br />
-              ㅁ 이너텔 C-type형
-              <br />
-              시내 : 42.9원/3분
-              <br />
-              시외 : 42.9원3분(30km 미만), 15.95원/10초(30km 이상)
-              <br />
-              이동전화 : 15.95원/10초
-              <br />
-              ㅁ 기업인터넷전화 Centrex형
-              <br />
-              시내/시외 : 41.6원/3분(5년 약정시)
-              <br />
-              이동전화 : 13.6원/10초(5년 약정시)
-              <br />
+              {details}
             </Typography>
           </AccordionDetails>
         </Accordion>
       </Box>
-      <Box>
+      {/* <Box>
         <Accordion
           onClick={onClick}
           sx={{
@@ -1006,7 +996,7 @@ export const FaqAccordion = ({ plusImg, mainColor, minusImg }) => {
             </Box>
           </AccordionDetails>
         </Accordion>
-      </Box>
+      </Box> */}
     </>
   );
 };

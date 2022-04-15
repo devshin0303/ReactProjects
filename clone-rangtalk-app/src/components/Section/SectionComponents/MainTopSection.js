@@ -45,7 +45,7 @@ const MainTopSection = ({ backMainImg, backMainMobileImg, talkName }) => {
           sx={
             matches
               ? { pt: 22, width: "600px", height: "auto" }
-              : { pt: 40, width: "600px", height: "auto" }
+              : { pt: 30, width: "600px", height: "auto" }
           }
         >
           <Typography

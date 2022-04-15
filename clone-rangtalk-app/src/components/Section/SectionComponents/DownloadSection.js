@@ -23,12 +23,9 @@ const DownloadSection = ({
   downTalkImg,
   downManualColor,
   downText,
-  downdef,
+  setDownloadCat,
 }) => {
   const matches = useMediaQuery("(min-width:600px)");
-  const [theme, setTheme] = useState();
-
-  const DownpageConverter = () => {};
 
   return (
     <Box
@@ -72,7 +69,8 @@ const DownloadSection = ({
           >
             <DownloadSectionTopBtn
               downTopBtnName={downTopBtnName}
-            ></DownloadSectionTopBtn>
+              setDownloadCat={setDownloadCat}
+            />
           </Box>
           <Box
             display="flex"
@@ -101,7 +99,7 @@ const DownloadSection = ({
                 }
                 image={downTalkImg}
                 alt="logoImg"
-              ></CardMedia>
+              />
             </Box>
           </Box>
           <Typography
